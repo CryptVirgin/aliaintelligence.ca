@@ -23,10 +23,13 @@
 {"@context":"https://schema.org","@type":"Organization","name":"ALIA Intelligence Inc.","url":"https://aliaintelligence.ca","logo":"https://aliaintelligence.ca/logo.png","image":"https://aliaintelligence.ca/og-image.png","description":"Canadian AI architecture and advisory firm. We design, build and run intelligent systems in production, end to end.","slogan":"Architecting Live Intelligent Applications","foundingDate":"2026","email":"info@aliaintelligence.ca","address":{"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"},"sameAs":["https://www.linkedin.com/company/aliaintelligence/"]}
 </script>
 <meta name="theme-color" content="#1E40AF" />
+<meta name="color-scheme" content="light dark" />
+<script>try{var t=localStorage.getItem("alia-theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
 <link rel="icon" type="image/png" href="favicon.png" />
+<link rel="preload" as="image" href="assets/alia-mark.webp" type="image/webp" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
 :root{
   --sapphire:#1E40AF; --sky:#60A5FA; --navy:#0F172A; --charcoal:#6B7280; --ink:#1E293B;
@@ -41,56 +44,17 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{width:min(1180px,100% - 48px);margin-inline:auto}
 h1,h2,h3{font-family:Montserrat,Inter,sans-serif;color:var(--navy);letter-spacing:-.02em;line-height:1.1}
-.eyebrow{font:700 13px Montserrat;letter-spacing:.2em;text-transform:uppercase;color:var(--sapphire);display:inline-flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:26px;height:4px;border-radius:2px;background:var(--spectrum)}
 .grad{background:linear-gradient(90deg,var(--sapphire),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
 .btn{display:inline-flex;align-items:center;gap:10px;font:600 16px Inter;padding:15px 26px;border-radius:12px;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
 .btn.pri{background:var(--sapphire);color:#fff;box-shadow:0 10px 26px rgba(30,64,175,.28)}
 .btn.pri:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(30,64,175,.36)}
 .btn.sec{background:#fff;color:var(--sapphire);border-color:var(--line)}
 .btn.sec:hover{border-color:var(--sky);transform:translateY(-2px)}
-/* nav */
-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{display:flex;align-items:center;gap:14px}.brand img{height:46px;width:auto}
-.brand b{display:block;font:800 21px Montserrat;letter-spacing:.3em;color:var(--navy);line-height:1}
-.brand span{display:block;font:500 10.5px Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);margin-top:5px}
-.links{display:flex;align-items:center;gap:30px;font:500 15px Inter;color:var(--ink)}
-.links a:hover{color:var(--sapphire)}
-.links .btn{padding:11px 20px;font-size:15px;white-space:nowrap}
-/* hero */
-.hero{position:relative;overflow:hidden;background:radial-gradient(900px 560px at 85% 20%,rgba(96,165,250,.22),rgba(255,255,255,0) 62%),radial-gradient(700px 480px at 0% 100%,rgba(30,64,175,.07),rgba(255,255,255,0) 60%),#fff}
-.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(30,64,175,.10) 1.2px,transparent 1.2px);background-size:34px 34px;mask-image:linear-gradient(180deg,rgba(0,0,0,.55),transparent 75%);-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.55),transparent 75%)}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:36px;padding:84px 0 92px}
-.status{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font:600 13.5px Inter;color:var(--ink);box-shadow:0 4px 14px rgba(30,64,175,.07)}
-.status i{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(16,185,129,.18)}
-.hero h1{font-size:clamp(46px,6.2vw,84px);font-weight:800;margin:26px 0 24px}
-.hero p.lead{font-size:20px;color:#475569;max-width:560px}
-.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.proof{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:38px;font:600 14px Inter;color:var(--charcoal)}
-.proof span{display:inline-flex;align-items:center;gap:8px}.proof span::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--sapphire);transform:rotate(45deg)}
-.visual{position:relative;display:flex;justify-content:center}
-.visual::before{content:"";position:absolute;width:92%;aspect-ratio:1;top:2%;border-radius:50%;background:radial-gradient(circle,rgba(96,165,250,.34),rgba(255,255,255,0) 66%)}
-.visual img{position:relative;width:min(520px,100%);filter:drop-shadow(0 30px 50px rgba(30,64,175,.26));animation:float 7s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-14px)}}
-.rays{position:absolute;left:8%;right:8%;bottom:-6px;height:12px;border-radius:8px;background:var(--spectrum);filter:blur(12px);opacity:.55}
-/* keywords strip */
-.strip{border-block:1px solid var(--line);background:var(--tint)}
-.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 22px;padding:22px 0;font:700 13px Montserrat;letter-spacing:.07em;text-transform:uppercase;color:var(--sapphire)}
-.strip span{display:inline-flex;align-items:center;gap:12px}
-.strip span::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c,var(--sapphire))}
 /* sections */
 section{padding:104px 0}
 .head{max-width:720px;margin-bottom:56px}
 .head h2{font-size:clamp(34px,4.2vw,52px);font-weight:800;margin:16px 0 16px}
 .head p{font-size:18px;color:#475569}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px 28px 30px;box-shadow:0 14px 38px rgba(30,64,175,.06);overflow:hidden;transition:transform .25s,box-shadow .25s}
-.step:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(30,64,175,.12)}
-.step::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--c)}
-.step .n{font:800 15px Montserrat;letter-spacing:.14em;color:var(--c)}
-.step h3{font-size:26px;margin:12px 0 10px;font-weight:800}
-.step p{font-size:16px;color:#475569}
 .caps{background:var(--tint)}
 .grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .cap{background:#fff;border:1px solid var(--line);border-radius:24px;padding:38px 36px;display:flex;gap:26px;box-shadow:0 14px 38px rgba(30,64,175,.05);transition:transform .25s,box-shadow .25s}
@@ -99,15 +63,7 @@ section{padding:104px 0}
 .ico svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .cap h3{font-size:25px;font-weight:800;margin-bottom:10px}.cap p{color:#475569;font-size:16.5px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.tags span{font:600 12.5px Inter;color:var(--sapphire);background:#EAF1FF;border-radius:8px;padding:6px 11px}
-/* spectrum */
-.spec .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-.spec .markbox{position:relative;display:flex;justify-content:center}
-.spec .markbox::before{content:"";position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,rgba(96,165,250,.28),rgba(255,255,255,0) 68%)}
-.spec .markbox img{position:relative;width:min(430px,100%)}
-.out{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
-.out div{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font:700 16.5px Montserrat;color:var(--navy);box-shadow:0 8px 22px rgba(30,64,175,.05)}
-.out i{flex:none;width:12px;height:36px;border-radius:6px;background:var(--c)}
+.tags>span{font:600 12.5px Inter;color:var(--sapphire);background:#EAF1FF;border-radius:8px;padding:6px 11px}
 /* stack */
 .stack{background:var(--tint)}
 .chips{display:flex;flex-wrap:wrap;gap:12px}
@@ -132,7 +88,7 @@ section{padding:104px 0}
 .contact::after{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--spectrum)}
 .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .contact h2{color:#fff;font-size:clamp(34px,4.4vw,54px);font-weight:800;margin:16px 0 18px}
-.contact .eyebrow{color:#93C5FD}
+.contact .label{color:#93C5FD}
 .contact p{font-size:18px;color:#CBD5E1}
 .form{background:#fff;border-radius:24px;padding:34px;color:var(--ink);box-shadow:0 30px 70px rgba(0,0,0,.28)}
 .form h3{font-size:22px;font-weight:800;margin-bottom:18px}
@@ -152,74 +108,249 @@ footer a:hover{color:var(--sapphire)}
 /* reveal */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.visual img{animation:none}html{scroll-behavior:auto}}
+
+:root{--night:#060B1B;--mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+body[data-tone="dark"]{--fg:#fff;--fg2:#B6C4E0;--hl:rgba(255,255,255,.18);--navbg:rgba(6,11,27,.55);--hudbg:rgba(6,11,27,.92)}
+body[data-tone="light"]{--fg:var(--navy);--fg2:#475569;--hl:rgba(15,23,42,.16);--navbg:rgba(255,255,255,.82);--hudbg:rgba(255,255,255,.94)}
+.label{font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--sapphire)}
+.dark .label,.story .label{color:#93C5FD}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--navbg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:background .35s}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:14px}.brand img{height:46px;width:auto}
+.brand b{display:block;font:800 21px Montserrat;letter-spacing:.3em;color:var(--fg,var(--navy));line-height:1;transition:color .35s}
+.brand span{display:block;font:500 10.5px Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--fg2,var(--charcoal));margin-top:5px;transition:color .35s}
+.links{display:flex;align-items:center;gap:30px;font:500 15px Inter;color:var(--fg,var(--ink));transition:color .35s}
+.links a:hover{color:var(--sky)}
+.links .btn{padding:11px 20px;font-size:15px;white-space:nowrap;color:#fff}
+/* HUD */
+.hud{position:fixed;inset:12px;z-index:55;pointer-events:none;border:1px solid var(--hl);transition:border-color .35s}
+.hud-bar{position:absolute;left:0;right:0;bottom:0;height:42px;background:var(--hudbg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:0 22px;font:500 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg2);transition:color .35s}
+.hud-bar b{font-weight:500;color:var(--fg);transition:color .35s}
+.hud-bar span{display:inline-flex;gap:12px}
+/* story (hero) */
+.story{position:relative;background:var(--night);color:#fff}
+.story-pin{position:relative;padding:150px 0 110px;overflow:hidden}
+.story-pin::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 600px at 72% 42%,rgba(37,99,235,.28),rgba(6,11,27,0) 65%)}
+#beam{display:none;position:absolute;inset:0;pointer-events:none}
+.story-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--hl);border-radius:999px;padding:8px 16px;font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#CFE0FF}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(16,185,129,.2)}
+.story h1{font-size:clamp(44px,6.2vw,92px);font-weight:800;margin:26px 0 24px;color:#fff;line-height:1.02}
+.story h1 .grad{background:linear-gradient(90deg,#93C5FD,#60A5FA);-webkit-background-clip:text;background-clip:text;color:transparent}
+.story .lead{font-size:19px;color:#C5D3EE;max-width:560px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px Inter;padding:15px 26px;border-radius:12px;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
+.btn.pri{background:var(--sapphire);color:#fff;box-shadow:0 10px 26px rgba(30,64,175,.35)}
+.btn.pri:hover{transform:translateY(-2px);background:#2347c9}
+.btn.sec{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.btn.sec:hover{border-color:var(--sky);transform:translateY(-2px)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.crystal{position:relative;justify-self:center;width:min(520px,88%);will-change:transform}
+.crystal picture{display:block}
+.crystal img{width:100%;height:auto;display:block;filter:drop-shadow(0 0 34px rgba(96,165,250,.55))}
+.story-caps{display:none}
+.outs{list-style:none;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:56px}
+.outs li{border-left:5px solid var(--c);padding:6px 0 6px 16px}
+.outs b{display:block;font:800 19px Montserrat;color:#fff}
+.outs span{display:block;font-size:15px;color:#B6C4E0;margin-top:3px}
+.proof{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#9FB4DA}
+.proof span::before{content:"";display:inline-block;width:7px;height:7px;margin-right:9px;background:var(--sky);transform:rotate(45deg)}
+/* story, pinned (wide screens with motion allowed) */
+.js-story .story{height:420vh}
+.js-story .story-pin{position:sticky;top:0;height:100vh;padding:0}
+.js-story #beam{display:block}
+.js-story .story-grid{position:absolute;inset:0;display:block;width:auto;margin:0}
+.js-story .story-copy{position:absolute;left:max(6vw,48px);top:55%;width:min(46vw,640px);transform:translateY(-52%);will-change:opacity,transform}
+.js-story .story h1{font-size:clamp(36px,min(6.2vw,9.2vh),92px);margin:clamp(14px,3vh,26px) 0 clamp(12px,2.6vh,24px)}
+.js-story .story .lead{font-size:clamp(15px,2.2vh,19px)}
+.js-story .cta{margin-top:clamp(16px,3.4vh,34px)}
+.js-story .proof{margin-top:clamp(14px,3vh,34px)}
+@media (max-height:700px){.js-story .proof{display:none}}
+.js-story .crystal{position:absolute;left:0;top:0;width:0;justify-self:auto}
+.js-story .story-caps{display:block}
+.js-story .story-caps p{position:absolute;left:max(6vw,48px);top:34vh;width:min(32vw,460px);font:800 clamp(30px,3.5vw,54px)/1.05 Montserrat;color:#fff;opacity:0;will-change:opacity,transform}
+.js-story .story-caps p em{font-style:normal;color:#93C5FD}
+.js-story .outs{position:absolute;inset:0;display:block;margin:0;pointer-events:none}
+.js-story .outs li{position:absolute;width:min(34vw,470px);opacity:0;border:0;padding:0 0 0 0;will-change:opacity,transform}
+.js-story .outs b{font-size:clamp(17px,1.55vw,23px)}
+.js-story .final-cta{display:flex}
+.final-cta{display:none;position:absolute;left:max(6vw,48px);bottom:11vh;gap:14px;opacity:0;pointer-events:none}
+/* sections */
+section{padding:112px 0}
+section[id]{scroll-margin-top:20px}
+.head{max-width:760px;margin-bottom:56px}
+.head h2{font-size:clamp(34px,4.4vw,56px);font-weight:800;margin:16px 0 16px}
+.head p{font-size:18px;color:#475569}
+.big{font-size:clamp(20px,2.1vw,27px);line-height:1.5;color:var(--ink);max-width:880px}
+.hint{display:block;margin-top:14px;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal)}
+/* hover-to-see words */
+.peek{position:relative;display:inline-block;border-bottom:2px solid var(--sky);color:var(--navy);font-weight:600;cursor:help;outline-offset:3px}
+.peek .pk{position:absolute;left:50%;bottom:calc(100% + 12px);width:176px;padding:10px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:0 22px 50px rgba(15,23,42,.22);opacity:0;transform:translate(-50%,8px) scale(.94);transform-origin:50% 100%;pointer-events:none;transition:opacity .22s,transform .28s cubic-bezier(.2,.8,.2,1);z-index:20}
+.peek .pk svg{display:block;width:100%;height:auto}
+.peek .pk small{display:block;margin-top:6px;font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--charcoal);text-align:center}
+.peek:hover .pk,.peek:focus .pk,.peek.open .pk{opacity:1;transform:translate(-50%,0) scale(1)}
+/* acts */
+.acts{list-style:none;margin-top:64px;border-top:1px solid var(--line)}
+.act{position:relative;display:grid;grid-template-columns:110px 1.35fr 1fr;gap:24px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);overflow:hidden;transition:background .35s,padding .35s}
+.act::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--c);opacity:.12;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.act:hover::before,.act:focus-within::before{width:100%}
+.act-n{position:relative;font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal)}
+.act h3{position:relative;font-size:clamp(44px,6.4vw,100px);font-weight:800;letter-spacing:-.035em;line-height:.98;color:var(--navy);transition:color .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.act:hover h3,.act:focus-within h3{color:var(--c);transform:translateX(10px)}
+.act p{position:relative;font-size:17.5px;color:#475569;max-width:380px}
+.act p::before{content:"";display:block;width:42px;height:6px;border-radius:3px;background:var(--c);margin-bottom:14px}
+/* spectrum tiles */
+.spec{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.spec::before{content:"";position:absolute;inset:0;background:radial-gradient(1000px 520px at 15% 0%,rgba(37,99,235,.24),rgba(6,11,27,0) 65%)}
+.spec .wrap{position:relative}
+.spec h2{color:#fff}.spec .head p{color:#B6C4E0}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;perspective:1200px}
+.tile{--rx:0deg;--ry:0deg;--gx:50%;--gy:0%;position:relative;min-height:250px;padding:30px 28px 28px;border-radius:22px;background:color-mix(in srgb,var(--c) 18%,#0B1329);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);overflow:hidden;transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,background .3s}
+.tile:hover{border-color:var(--c);background:color-mix(in srgb,var(--c) 30%,#0B1329)}
+.tile::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(360px circle at var(--gx) var(--gy),rgba(255,255,255,.22),transparent 60%);opacity:0;transition:opacity .3s}
+.tile:hover::after{opacity:1}
+.tile i{display:block;width:46px;height:8px;border-radius:4px;background:var(--c);margin-bottom:22px}
+.tile h3{color:#fff;font-size:27px;font-weight:800;margin-bottom:10px}
+.tile p{color:#D2DDF2;font-size:16.5px}
+.tile .k{position:absolute;right:22px;top:20px;font:500 11.5px var(--mono);letter-spacing:.08em;color:rgba(255,255,255,.55)}
+.spec .why{max-width:640px;margin-top:40px;font-size:17px;color:#9FB4DA}
 @media (max-width:980px){
- .hero .wrap,.spec .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}
- .hero .wrap{padding:56px 0 64px}.visual{order:-1}.visual img{width:min(340px,80%)}
- .steps{grid-template-columns:1fr 1fr}.grid4{grid-template-columns:1fr}.ins{grid-template-columns:1fr}
- .links a:not(.btn){display:none}section{padding:72px 0}
+ .story-grid{grid-template-columns:1fr}
+ .story-pin{padding:116px 0 72px}.crystal{order:-1;width:min(340px,80%)}
+ .outs{grid-template-columns:1fr}
+ .grid4{grid-template-columns:1fr}.ins{grid-template-columns:1fr}
+ .tiles{grid-template-columns:1fr 1fr}
+ .act{grid-template-columns:1fr;gap:6px;padding:26px 0}.act h3{font-size:clamp(46px,14vw,86px)}
+ .links a:not(.btn){display:none}section{padding:76px 0}
+ .hud{display:none}
 }
-@media (max-width:560px){.brand span{display:none}.links .btn{padding:10px 16px;font-size:14px}.brand b{font-size:19px}.steps{grid-template-columns:1fr}.out{grid-template-columns:1fr}.form .r{grid-template-columns:1fr}.cap{flex-direction:column;gap:18px}.strip .wrap{justify-content:flex-start}}
+@media (max-width:560px){.brand span{display:none}.links .btn{padding:10px 16px;font-size:14px}.brand b{font-size:19px}.tiles{grid-template-columns:1fr}.form .r{grid-template-columns:1fr}.cap{flex-direction:column;gap:18px}.about .wrap,.contact .wrap{grid-template-columns:1fr}}
+@media (max-width:980px){.about .wrap,.contact .wrap{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.tile,.act::before,.act h3,.peek .pk{transition:none}}
+
+/* skip link, focus */
+.skip{position:fixed;left:16px;top:-60px;z-index:100;background:var(--sapphire);color:#fff;padding:12px 18px;border-radius:10px;font:600 15px Inter;transition:top .2s}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+/* theme toggle */
+.tt{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--hl);background:transparent;color:var(--fg,var(--navy));display:grid;place-items:center;cursor:pointer;transition:border-color .2s,transform .2s}
+.tt:hover{border-color:var(--sky);transform:rotate(18deg)}
+.tt svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tt .moon{display:none}
+html[data-theme="dark"] .tt .sun{display:none}html[data-theme="dark"] .tt .moon{display:block}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-old(root){z-index:1}::view-transition-new(root){z-index:2}
+/* dark theme for the light sections */
+html[data-theme="dark"]{color-scheme:dark;--ink:#E3EAF8;--navy:#F3F7FF;--tint:#0A1126;--line:#1E2B4D;--charcoal:#9FB1D3;--white:#0F1A33}
+html[data-theme="dark"] body{background:#060B1B;color:var(--ink)}
+html[data-theme="dark"] body[data-tone="light"]{--fg:#fff;--fg2:#B6C4E0;--hl:rgba(255,255,255,.18);--navbg:rgba(6,11,27,.66);--hudbg:rgba(6,11,27,.92)}
+html[data-theme="dark"] .head p,html[data-theme="dark"] .act p,html[data-theme="dark"] .cap p,html[data-theme="dark"] .ins p,html[data-theme="dark"] .about p{color:#B6C4E0}
+html[data-theme="dark"] .big{color:#E3EAF8}
+html[data-theme="dark"] .cap,html[data-theme="dark"] .ins a,html[data-theme="dark"] .chips span{background:#0F1A33;border-color:var(--line);box-shadow:none;color:#E3EAF8}
+html[data-theme="dark"] .cap:hover,html[data-theme="dark"] .ins a:hover{box-shadow:0 18px 40px rgba(0,0,0,.4)}
+html[data-theme="dark"] .tags>span{background:#16264D;color:#BFD6FF}
+html[data-theme="dark"] .label,html[data-theme="dark"] .ins small{color:#93C5FD}
+html[data-theme="dark"] .peek{color:#fff;border-bottom-color:var(--sky)}
+html[data-theme="dark"] .peek .pk{background:#0F1A33;border-color:var(--line);box-shadow:0 22px 50px rgba(0,0,0,.55)}
+html[data-theme="dark"] .pk svg [stroke="#1E40AF"]{stroke:#93C5FD}
+html[data-theme="dark"] .pk small{color:#9FB1D3}
+html[data-theme="dark"] .btn.sec{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+html[data-theme="dark"] footer{background:#060B1B;border-top-color:var(--line);color:#9FB1D3}
+html[data-theme="dark"] .facts{background:#0F1A33}
+html[data-theme="dark"] #approach{background:#0A1126}
+html[data-theme="dark"] .nums b{color:#93C5FD}
+.form{--navy:#0F172A;--ink:#1E293B;--line:#E2EBFA}
+.gone .status,.gone .lead,.gone .cta,.gone .proof{visibility:hidden}
+footer .brand b{color:var(--navy)}footer .brand span{color:var(--charcoal)}
+/* tag peeks */
+.tags>span.peek{border-bottom:0;cursor:help;font-weight:600}
+.tags>span.peek::after{content:"";display:inline-block;width:6px;height:6px;margin-left:7px;border-radius:50%;background:var(--sky);vertical-align:1px}
+/* numbers */
+.nums{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:28px}
+.nums div{padding-top:18px;border-top:4px solid var(--c,var(--sapphire))}
+.nums b{display:block;font:800 clamp(54px,7.6vw,112px)/1 Montserrat;letter-spacing:-.04em;color:var(--sapphire);font-variant-numeric:tabular-nums}
+.nums span{display:block;margin-top:8px;font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal)}
+@media (max-width:760px){.nums{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){.tt{transition:none}.tt:hover{transform:none}}
 </style>
 </head>
 <body>
-<nav><div class="wrap">
-  <a class="brand" href="#top" aria-label="ALIA Intelligence home"><img src="assets/alia-mark.png" alt="" /><div><b>ALIA</b><span>Intelligence Inc.</span></div></a>
-  <div class="links"><a href="#approach">Approach</a><a href="#capabilities">Capabilities</a><a href="#insights">Insights</a><a href="#about">About</a><a class="btn pri" href="#contact">Work with us</a></div>
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Primary"><div class="wrap">
+  <a class="brand" href="#top" aria-label="ALIA Intelligence home"><img src="assets/alia-mark-sm.png" alt="" width="56" height="46" /><div><b>ALIA</b><span>Intelligence Inc.</span></div></a>
+  <div class="links"><a href="#approach">Approach</a><a href="#capabilities">Capabilities</a><a href="#insights">Insights</a><a href="#about">About</a><button class="tt" id="themeBtn" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button><a class="btn pri" href="#contact">Work with us</a></div>
 </div></nav>
 
-<header class="hero" id="top"><div class="wrap">
-  <div>
-    <div class="status"><i></i>Accepting engagements</div>
-    <h1>Intelligent systems.<br><span class="grad">Designed. Built. Live.</span></h1>
-    <p class="lead">We design and build AI systems that run in production: knowledge bases, autonomous agents and full intelligent application stacks. Working systems, with one senior architect accountable from the first diagram to go live.</p>
-    <div class="cta"><a class="btn pri" href="#capabilities">See capabilities &rarr;</a><a class="btn sec" href="#contact">Start a conversation</a></div>
-    <div class="proof"><span>Toronto based</span><span>Production grade</span><span>Open standards</span></div>
+<div class="hud" aria-hidden="true"><div class="hud-bar"><span><b id="hudCode">A/01 &middot; The tangle</b></span><span>Scroll <b id="hudPct">000</b>%</span><span>Toronto <b id="hudTime">--:--</b></span></div></div>
+
+<main id="main">
+<header class="story" id="top" data-tone="dark" data-code="A/01 &middot; The tangle"><div class="story-pin">
+  <canvas id="beam" aria-hidden="true"></canvas>
+  <div class="wrap story-grid">
+    <div class="story-copy" id="sc1">
+      <div class="status"><i></i>Accepting engagements</div>
+      <h1>Intelligent systems.<br><span class="grad">Designed. Built. Live.</span></h1>
+      <p class="lead">We design and build AI systems that run in production: knowledge bases, autonomous agents and full intelligent application stacks. Working systems, with one senior architect accountable from the first diagram to go live.</p>
+      <div class="cta"><a class="btn pri" href="#capabilities">See capabilities &rarr;</a><a class="btn sec" href="#contact">Start a conversation</a></div>
+      <div class="proof"><span>Toronto based</span><span>Production grade</span><span>Open standards</span></div>
+    </div>
+    <div class="crystal" id="crystal"><picture><source type="image/webp" srcset="assets/alia-mark.webp" /><img src="assets/alia-mark.png" alt="ALIA crystal mark breaking into a spectrum of light" width="680" height="560" fetchpriority="high" decoding="async" /></picture></div>
   </div>
-  <div class="visual"><img src="assets/alia-mark.png" alt="ALIA crystal mark breaking into a spectrum of light" /><div class="rays"></div></div>
+  <div class="story-caps" aria-hidden="true"><p id="cap2">Your tangled problem, drawn into <em>one beam.</em></p><p id="cap3">Refracted into six outputs of <em>one system.</em></p></div>
+  <ul class="outs" id="outs">
+    <li style="--c:var(--red)"><b>Knowledge bases</b><span>Retrieval you can audit, built on your own documents and data.</span></li>
+    <li style="--c:var(--orange)"><b>Autonomous agents</b><span>Multi step work across your systems, with human oversight designed in.</span></li>
+    <li style="--c:var(--green)"><b>MCP integrations</b><span>One open protocol between agents and the tools you already run.</span></li>
+    <li style="--c:var(--cyan)"><b>Evaluation</b><span>Tests that show whether an answer is right before your users find out.</span></li>
+    <li style="--c:var(--blue)"><b>Monitoring</b><span>Live visibility into quality, latency and failures once the system is running.</span></li>
+    <li style="--c:var(--violet)"><b>Cost controls</b><span>Budgets, caching and routing so the spend stays predictable.</span></li>
+  </ul>
+  <div class="final-cta" id="fcta"><a class="btn pri" href="#capabilities">See capabilities &rarr;</a><a class="btn sec" href="#contact">Start a conversation</a></div>
 </div></header>
 
-<div class="strip"><div class="wrap">
-  <span style="--c:var(--red)">Knowledge bases</span><span style="--c:var(--orange)">Autonomous agents</span><span style="--c:var(--green)">MCP integrations</span><span style="--c:var(--cyan)">Evaluation</span><span style="--c:var(--blue)">Monitoring</span><span style="--c:var(--violet)">Cost controls</span>
-</div></div>
+<section id="approach" data-tone="light" data-code="A/02 &middot; Approach"><div class="wrap">
+  <div class="head rv"><div class="label">( Act II &mdash; the approach )</div><h2>We deliver a working system, not a deck.</h2></div>
+  <p class="big rv">Every engagement runs the full arc: <span class="peek" tabindex="0">architecture<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="10" width="132" height="18" rx="5"/><rect x="14" y="41" width="132" height="18" rx="5" stroke="#60A5FA"/><rect x="14" y="72" width="132" height="18" rx="5"/><path d="M80 28v13M80 59v13"/></svg><small>Layers, designed as one</small></span></span>, build, <span class="peek" tabindex="0">integration<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="80" cy="50" r="12"/><circle cx="25" cy="22" r="8" stroke="#60A5FA"/><circle cx="135" cy="22" r="8" stroke="#60A5FA"/><circle cx="25" cy="80" r="8" stroke="#60A5FA"/><circle cx="135" cy="80" r="8" stroke="#60A5FA"/><path d="M31 27l38 17M129 27l-38 17M31 75l38-17M129 75l-38-17"/></svg><small>Hub and spokes</small></span></span>, <span class="peek" tabindex="0">deployment<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="34" width="40" height="32" rx="6"/><rect x="60" y="34" width="40" height="32" rx="6" stroke="#60A5FA"/><path d="M50 50h10M100 50h14"/><circle cx="130" cy="50" r="14"/><circle cx="130" cy="50" r="5" fill="#10B981" stroke="#10B981"/></svg><small>From build to live</small></span></span> and the <span class="peek" tabindex="0">controls<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 78a56 56 0 0 1 112 0"/><path d="M80 78L106 40" stroke="#EF4444"/><circle cx="80" cy="78" r="5" fill="#1E40AF"/><path d="M42 78h8M110 78h8M80 30v8" stroke="#60A5FA"/></svg><small>Limits you can read</small></span></span> that keep it reliable. One accountable senior architect, from the first diagram to the live system.</p>
+  <span class="hint rv">Hover the underlined words to see the work</span>
+  <p class="big rv" style="margin-top:22px;font-size:18px;font-weight:500;color:var(--navy)">Currently engaged by a North American freight technology company on production AI architecture.</p>
+  <ol class="acts">
+    <li class="act rv" style="--c:var(--red)" tabindex="0"><span class="act-n">Act I</span><h3>Discover</h3><p>Your systems, data and goals, mapped before anything is built.</p></li>
+    <li class="act rv" style="--c:var(--orange)" tabindex="0"><span class="act-n">Act II</span><h3>Architect</h3><p>The full solution designed: retrieval, agents, integrations and controls.</p></li>
+    <li class="act rv" style="--c:var(--green)" tabindex="0"><span class="act-n">Act III</span><h3>Build</h3><p>Engineered to production standards and wired into your stack.</p></li>
+    <li class="act rv" style="--c:var(--violet)" tabindex="0"><span class="act-n">Act IV</span><h3>Run</h3><p>Deployed live and kept reliable, with evaluation and monitoring in place.</p></li>
+  </ol>
+</div></section>
 
-<section id="approach"><div class="wrap">
-  <div class="head rv"><div class="eyebrow">Approach</div><h2>We deliver a working system, not a deck.</h2><p>Every engagement runs the full arc: architecture, build, integration, deployment and the controls that keep it reliable. One accountable senior architect, from the first diagram to the live system.</p><p style="margin-top:14px;font-weight:500;color:var(--navy)">Currently engaged by a North American freight technology company on production AI architecture.</p></div>
-  <div class="steps">
-    <div class="step rv" style="--c:var(--red)"><div class="n">01</div><h3>Discover</h3><p>Your systems, data and goals, mapped before anything is built.</p></div>
-    <div class="step rv" style="--c:var(--orange)"><div class="n">02</div><h3>Architect</h3><p>The full solution designed: retrieval, agents, integrations and controls.</p></div>
-    <div class="step rv" style="--c:var(--green)"><div class="n">03</div><h3>Build</h3><p>Engineered to production standards and wired into your stack.</p></div>
-    <div class="step rv" style="--c:var(--violet)"><div class="n">04</div><h3>Run</h3><p>Deployed live and kept reliable, with evaluation and monitoring in place.</p></div>
+<section class="spec" id="spectrum" data-tone="dark" data-code="A/03 &middot; The spectrum"><div class="wrap">
+  <div class="head rv"><div class="label">( Act III &mdash; why the crystal )</div><h2>One problem in. A full spectrum out.</h2><p>Our mark is a crystal that takes a single beam of light and refracts it into every colour. That is how an engagement works: one tangled problem becomes a complete, connected set of solutions.</p></div>
+  <p class="why-q" style="margin:0 0 18px;font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#93C5FD">The six questions every serious buyer asks</p>
+  <div class="tiles">
+    <div class="tile tilt rv" style="--c:var(--red)"><span class="k" aria-hidden="true">R</span><i></i><h3>Knowledge base</h3><p>Can it answer from our own documents, and show its sources?</p></div>
+    <div class="tile tilt rv" style="--c:var(--orange)"><span class="k" aria-hidden="true">O</span><i></i><h3>Agents</h3><p>What can it do on its own, and where does a person step in?</p></div>
+    <div class="tile tilt rv" style="--c:var(--green)"><span class="k" aria-hidden="true">G</span><i></i><h3>MCP integrations</h3><p>How does it reach the tools and data we already run?</p></div>
+    <div class="tile tilt rv" style="--c:var(--cyan)"><span class="k" aria-hidden="true">C</span><i></i><h3>Evaluation</h3><p>How do we know an answer is right before a customer sees it?</p></div>
+    <div class="tile tilt rv" style="--c:var(--blue)"><span class="k" aria-hidden="true">B</span><i></i><h3>Monitoring</h3><p>What is it doing right now, and what just broke?</p></div>
+    <div class="tile tilt rv" style="--c:var(--violet)"><span class="k" aria-hidden="true">V</span><i></i><h3>Cost controls</h3><p>What will this cost at ten times the volume?</p></div>
   </div>
 </div></section>
 
-<section class="caps" id="capabilities"><div class="wrap">
-  <div class="head rv"><div class="eyebrow">Capabilities</div><h2>Four disciplines. One coherent practice.</h2><p>We cover the full stack from strategy to deployment, and choose tools for their fit to the problem.</p></div>
+<section class="caps" id="capabilities" data-tone="light" data-code="A/04 &middot; Capabilities"><div class="wrap">
+  <div class="head rv"><div class="label">( Capabilities )</div><h2>Four disciplines. One coherent practice.</h2><p>We cover the full stack from strategy to deployment, and choose tools for their fit to the problem.</p></div>
   <div class="grid4">
-    <div class="cap rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></div><div><h3>AI Architecture Design</h3><p>Knowledge base architecture, retrieval strategy, agent orchestration, MCP integrations and cost controls, designed as one system.</p><div class="tags"><span>RAG</span><span>Vector databases</span><span>MCP</span><span>Knowledge bases</span></div></div></div>
-    <div class="cap rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5" r="2"/><circle cx="19.5" cy="5" r="2"/><circle cx="4.5" cy="19" r="2"/><circle cx="19.5" cy="19" r="2"/><path d="M6 6.4l4.2 3.6M18 6.4L13.8 10M6 17.6l4.2-3.6M18 17.6L13.8 14"/></svg></div><div><h3>Autonomous Agent Systems</h3><p>Multi agent architectures that reason and act across your enterprise systems, from targeted automation to long multi step workflows, with human oversight designed in.</p><div class="tags"><span>LangGraph</span><span>AutoGen</span><span>CrewAI</span><span>Human in the loop</span></div></div></div>
+    <div class="cap rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></div><div><h3>AI Architecture Design</h3><p>Knowledge base architecture, retrieval strategy, agent orchestration, MCP integrations and cost controls, designed as one system.</p><div class="tags"><span class="peek" tabindex="0">RAG<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="22" width="26" height="34" rx="4"/><rect x="14" y="30" width="26" height="34" rx="4" stroke="#60A5FA"/><path d="M48 46h16"/><circle cx="76" cy="34" r="3.5"/><circle cx="90" cy="52" r="3.5" stroke="#60A5FA"/><circle cx="74" cy="64" r="3.5"/><path d="M99 46h14"/><rect x="118" y="24" width="36" height="44" rx="5"/><path d="M125 38h22M125 48h22M125 58h12" stroke="#60A5FA"/></svg><small>Retrieval, then answer</small></span></span><span>Vector databases</span><span class="peek" tabindex="0">MCP<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="80" cy="50" r="12"/><circle cx="25" cy="22" r="8" stroke="#60A5FA"/><circle cx="135" cy="22" r="8" stroke="#60A5FA"/><circle cx="25" cy="80" r="8" stroke="#60A5FA"/><circle cx="135" cy="80" r="8" stroke="#60A5FA"/><path d="M31 27l38 17M129 27l-38 17M31 75l38-17M129 75l-38-17"/></svg><small>One protocol, many tools</small></span></span><span>Knowledge bases</span></div></div></div>
+    <div class="cap rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="5" r="2"/><circle cx="19.5" cy="5" r="2"/><circle cx="4.5" cy="19" r="2"/><circle cx="19.5" cy="19" r="2"/><path d="M6 6.4l4.2 3.6M18 6.4L13.8 10M6 17.6l4.2-3.6M18 17.6L13.8 14"/></svg></div><div><h3>Autonomous Agent Systems</h3><p>Multi agent architectures that reason and act across your enterprise systems, from targeted automation to long multi step workflows, with human oversight designed in.</p><div class="tags"><span>LangGraph</span><span>AutoGen</span><span>CrewAI</span><span class="peek" tabindex="0">Human in the loop<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="34" width="38" height="32" rx="7"/><path d="M46 50h26"/><path d="M86 34l16 16-16 16-16-16z" stroke="#60A5FA"/><path d="M102 50h18"/><circle cx="134" cy="42" r="8"/><path d="M122 68a12 12 0 0 1 24 0"/></svg><small>A person approves</small></span></span></div></div></div>
     <div class="cap rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M7 8h10v4a5 5 0 0 1-10 0z"/><path d="M12 17v4"/></svg></div><div><h3>Enterprise Integration</h3><p>Connecting AI to your existing stack: CRMs, ERPs, data warehouses and proprietary APIs. Secure, production hardened and maintainable.</p><div class="tags"><span>REST</span><span>GraphQL</span><span>ETL</span><span>MCP servers</span></div></div></div>
     <div class="cap rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 20l5-6 4 3 8-11"/><path d="M15 6h5v5"/></svg></div><div><h3>Strategy &amp; Advisory</h3><p>Platform selection, build or buy analysis and AI roadmap design grounded in real engineering, with no vendor allegiance and no buzzwords.</p><div class="tags"><span>Architecture review</span><span>Roadmap</span><span>Governance</span></div></div></div>
   </div>
 </div></section>
 
-<section class="spec"><div class="wrap">
-  <div class="markbox rv"><img src="assets/alia-mark.png" alt="" /></div>
-  <div class="rv"><div class="eyebrow">Why the crystal</div><div class="head" style="margin:16px 0 28px"><h2 style="margin-top:0">One problem in. A full spectrum out.</h2><p>Our mark is a crystal that takes a single beam of light and refracts it into every colour. That is how an engagement works: one tangled problem becomes a complete, connected set of solutions.</p></div>
-  <div class="out">
-    <div style="--c:var(--red)"><i></i>Knowledge base</div><div style="--c:var(--orange)"><i></i>Agents</div>
-    <div style="--c:var(--green)"><i></i>MCP integrations</div><div style="--c:var(--cyan)"><i></i>Evaluation</div>
-    <div style="--c:var(--blue)"><i></i>Monitoring</div><div style="--c:var(--violet)"><i></i>Cost controls</div>
-  </div></div>
-</div></section>
-
-<section class="stack"><div class="wrap">
-  <div class="head rv"><div class="eyebrow">Technology</div><h2>The modern AI stack, chosen for fit.</h2><p>Built on open standards, proven infrastructure and the leading AI platforms.</p></div>
+<section class="stack" data-tone="light" data-code="A/05 &middot; Technology"><div class="wrap">
+  <div class="head rv"><div class="label">( Technology )</div><h2>The modern AI stack, chosen for fit.</h2><p>Built on open standards, proven infrastructure and the leading AI platforms.</p></div>
   <div class="chips rv"><span>Claude</span><span>GPT</span><span>LangChain</span><span>LangGraph</span><span>Pinecone</span><span>Weaviate</span><span>FastAPI</span><span>Docker &amp; Kubernetes</span><span>AWS</span><span>Azure</span><span>MCP</span><span>Python</span><span>REST &amp; GraphQL</span><span>Observability</span></div>
 </div></section>
 
-<section id="insights"><div class="wrap">
-  <div class="head rv"><div class="eyebrow">Insights</div><h2>AI in production, explained plainly.</h2><p>Short, practical notes on RAG, MCP, agents, human oversight and the controls that keep AI reliable.</p></div>
+<section id="insights" data-tone="light" data-code="A/06 &middot; Insights"><div class="wrap">
+  <div class="head rv"><div class="label">( Insights )</div><h2>AI in production, explained plainly.</h2><p>Short, practical notes on RAG, MCP, agents, human oversight and the controls that keep AI reliable.</p></div>
   <div class="ins">
     <a class="rv" href="https://www.linkedin.com/company/aliaintelligence/" target="_blank" rel="noopener"><small>RAG</small><h3>Your RAG is only as good as your knowledge base</h3><p>Five things to audit before you tune a single prompt.</p></a>
     <a class="rv" href="https://www.linkedin.com/company/aliaintelligence/" target="_blank" rel="noopener"><small>Human oversight</small><h3>In, on or over the loop</h3><p>Three designs for human oversight, and when to use each.</p></a>
@@ -228,16 +359,22 @@ footer a:hover{color:var(--sapphire)}
   <div class="follow rv"><a class="btn sec" href="https://www.linkedin.com/company/aliaintelligence/" target="_blank" rel="noopener">Follow ALIA Intelligence on LinkedIn &rarr;</a></div>
 </div></section>
 
-<section class="about" id="about" style="background:var(--tint)"><div class="wrap">
-  <div class="rv"><div class="eyebrow">About</div><h2>Engineering led. Built to ship.</h2>
-   <p>ALIA Intelligence Inc. is a Toronto based AI engineering practice. We design and deploy production AI systems, from knowledge bases and autonomous agents to enterprise integrations, for organizations that need them working, not just specified.</p>
+<section class="about" id="about" data-tone="light" data-code="A/07 &middot; About" style="background:var(--tint)"><div class="wrap">
+  <div class="rv"><div class="label">( About )</div><h2>Engineering led. Built to ship.</h2>
+   <p>ALIA Intelligence Inc. is a Toronto based AI engineering practice. We design and deploy production AI systems, from <span class="peek" tabindex="0">knowledge bases<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="22" width="26" height="34" rx="4"/><rect x="14" y="30" width="26" height="34" rx="4" stroke="#60A5FA"/><path d="M48 46h16"/><circle cx="76" cy="34" r="3.5"/><circle cx="90" cy="52" r="3.5" stroke="#60A5FA"/><circle cx="74" cy="64" r="3.5"/><path d="M99 46h14"/><rect x="118" y="24" width="36" height="44" rx="5"/><path d="M125 38h22M125 48h22M125 58h12" stroke="#60A5FA"/></svg><small>Documents, index, answer</small></span></span> and <span class="peek" tabindex="0">autonomous agents<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="40" cy="30" r="13"/><circle cx="120" cy="30" r="13" stroke="#60A5FA"/><circle cx="80" cy="76" r="13"/><path d="M53 30h54M112 42l-24 22M72 64L48 42"/><circle cx="80" cy="76" r="4" fill="#10B981" stroke="#10B981"/></svg><small>Plan, act, check</small></span></span> to <span class="peek" tabindex="0">enterprise integrations<span class="pk" aria-hidden="true"><svg viewBox="0 0 160 100" fill="none" stroke="#1E40AF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="80" cy="50" r="12"/><circle cx="25" cy="22" r="8" stroke="#60A5FA"/><circle cx="135" cy="22" r="8" stroke="#60A5FA"/><circle cx="25" cy="80" r="8" stroke="#60A5FA"/><circle cx="135" cy="80" r="8" stroke="#60A5FA"/><path d="M31 27l38 17M129 27l-38 17M31 75l38-17M129 75l-38-17"/></svg><small>Your stack, connected</small></span></span>, for organizations that need them working, not just specified.</p>
    <p><b style="color:var(--navy)">ALIA</b> stands for Architecting Live Intelligent Applications. Every engagement produces a working system: designed, built, integrated and running in production.</p>
    <p>We take on a small number of clients at a time and work embedded with each. Where the work needs real engineering depth, that is where we operate.</p></div>
   <div class="facts rv"><div><small>Founded</small><b>2026</b></div><div><small>Based in</small><b>Toronto, Ontario</b></div><div><small>Practice</small><b>AI architecture and advisory</b></div><div><small>Engagements</small><b>A limited number at a time</b></div></div>
+<div class="nums" aria-label="ALIA in numbers">
+    <div style="--c:var(--red)"><b class="cnt" data-to="4">4</b><span>Disciplines</span></div>
+    <div style="--c:var(--green)"><b class="cnt" data-to="6">6</b><span>Outputs</span></div>
+    <div style="--c:var(--blue)"><b class="cnt" data-to="1">1</b><span>Accountable architect</span></div>
+    <div style="--c:var(--violet)"><b class="cnt" data-from="2000" data-to="2026">2026</b><span>Founded</span></div>
+  </div>
 </div></section>
 
-<section class="contact" id="contact"><div class="wrap">
-  <div class="rv"><div class="eyebrow">Contact</div><h2>Let us build something extraordinary.</h2><p>We take on a limited number of engagements. If what you are building needs genuine AI architecture depth, we should talk.</p><p class="mail">Prefer email? <a href="mailto:info@aliaintelligence.ca">info@aliaintelligence.ca</a></p></div>
+<section class="contact" id="contact" data-tone="dark" data-code="A/08 &middot; Contact"><div class="wrap">
+  <div class="rv"><div class="label">( Contact )</div><h2>Let us build something extraordinary.</h2><p>We take on a limited number of engagements. If what you are building needs genuine AI architecture depth, we should talk.</p><p class="mail">Prefer email? <a href="mailto:info@aliaintelligence.ca">info@aliaintelligence.ca</a></p></div>
   <form class="form rv" id="contactForm" action="https://formspree.io/f/mkolvwdr" method="POST">
     <input type="hidden" name="_subject" value="New inquiry from aliaintelligence.ca" />
     <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -249,8 +386,9 @@ footer a:hover{color:var(--sapphire)}
   </form>
 </div></section>
 
-<footer><div class="wrap">
-  <a class="brand" href="#top"><img src="assets/alia-mark.png" alt="" /><div><b style="font-size:17px">ALIA</b><span>Intelligence Inc.</span></div></a>
+</main>
+<footer data-tone="light" data-code="A/09 &middot; The end"><div class="wrap">
+  <a class="brand" href="#top"><img src="assets/alia-mark-sm.png" alt="" width="46" height="38" /><div><b style="font-size:17px">ALIA</b><span>Intelligence Inc.</span></div></a>
   <div class="fl"><a href="privacy.html">Privacy</a><a href="https://www.linkedin.com/company/aliaintelligence/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:info@aliaintelligence.ca">Email</a></div>
   <span>&copy; <span id="yr">2026</span> ALIA Intelligence Inc.</span>
 </div></footer>
@@ -267,6 +405,104 @@ cf.addEventListener('submit',async function(e){e.preventDefault();var st=documen
   else{st.className='fs err';st.textContent='Something went wrong. Please email info@aliaintelligence.ca.'}}
  catch(err){st.className='fs err';st.textContent='Something went wrong. Please email info@aliaintelligence.ca.'}
  finally{btn.disabled=false}});
+
+(function(){
+var $=function(q,r){return (r||document).querySelector(q)},$$=function(q,r){return Array.prototype.slice.call((r||document).querySelectorAll(q))};
+var clamp=function(v,a,b){return Math.max(a,Math.min(b,v))},lerp=function(a,b,t){return a+(b-a)*t};
+var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+var seg=function(p,a,b){return clamp((p-a)/(b-a),0,1)};
+var mqWide=window.matchMedia('(min-width:900px)'),mqMotion=window.matchMedia('(prefers-reduced-motion: no-preference)');
+var canHover=window.matchMedia('(hover:hover) and (pointer:fine)');
+var root=document.documentElement,story=$('.story'),pin=$('.story-pin'),cv=$('#beam'),ctx=cv.getContext('2d');
+var crystal=$('#crystal'),cimg=$('img',crystal),sc1=$('#sc1'),cap2=$('#cap2'),cap3=$('#cap3'),fcta=$('#fcta'),outs=$$('#outs li');
+var COLORS=['#EF4444','#F97316','#10B981','#22D3EE','#3B82F6','#8B5CF6'];
+var W=0,H=0,dpr=1,cur=0,tgt=0,raf=0,strands=[],hudCode=$('#hudCode'),hudPct=$('#hudPct'),hudTime=$('#hudTime');
+for(var i=0;i<34;i++)strands.push({r1:Math.random(),r2:Math.random(),r3:Math.random(),r4:Math.random(),ph:Math.random()*6.28});
+function active(){return mqWide.matches&&mqMotion.matches}
+function setMode(){var on=active();root.classList.toggle('js-story',on);if(on){size();if(!raf)raf=requestAnimationFrame(frame)}else{cancelAnimationFrame(raf);raf=0;[sc1,cap2,cap3,fcta].forEach(function(e){e.removeAttribute('style')});sc1.classList.remove('gone');outs.forEach(function(e){e.removeAttribute('style')});crystal.removeAttribute('style');cimg.removeAttribute('style')}}
+function size(){W=pin.clientWidth;H=pin.clientHeight;dpr=Math.min(2,window.devicePixelRatio||1);cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px'}
+function progress(){var r=story.getBoundingClientRect(),total=story.offsetHeight-window.innerHeight;return total>0?clamp(-r.top/total,0,1):0}
+function bez(a,b,c,d,t){var u=1-t;return u*u*u*a+3*u*u*t*b+3*u*t*t*c+t*t*t*d}
+function frame(now){
+  if(!inView){raf=0;return}raf=requestAnimationFrame(frame);
+  tgt=progress();cur+=(tgt-cur)*.14;if(Math.abs(tgt-cur)<.0004)cur=tgt;var p=cur,t=now/1000;
+  var cw=Math.min(.40*W,.62*H*680/560),ch=cw*560/680;
+  var slide=ease(seg(p,.28,.55)),cx=lerp(.70*W,.27*W,slide),cy=.50*H;
+  crystal.style.width=cw+'px';crystal.style.transform='translate3d('+(cx-cw/2)+'px,'+(cy-ch/2)+'px,0)';
+  var glow=lerp(26,64,seg(p,.2,.6));cimg.style.filter='drop-shadow(0 0 '+glow.toFixed(0)+'px rgba(96,165,250,'+lerp(.5,.85,seg(p,.2,.6)).toFixed(2)+'))';
+  var E={x:cx-cw/2+.30*cw,y:cy-ch/2+.70*ch},B={x:cx,y:cy-ch/2+.745*ch};
+  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+  var chaos=1-ease(seg(p,.10,.46)),beamA=lerp(1,.55,seg(p,.62,.9));
+  var x0=Math.max(-10,E.x-lerp(.16*W,.30*W,slide));
+  ctx.globalCompositeOperation='lighter';
+  for(var i=0;i<strands.length;i++){var s=strands[i];ctx.beginPath();
+    var y0=E.y+(s.r1-.5)*H*.85*chaos,ax=chaos*(26+s.r2*70),fq=2+s.r3*3,sp=.35+s.r4;
+    for(var j=0;j<=44;j++){var u=j/44,x=lerp(x0+(s.r2-.5)*.04*W*chaos,E.x,u),y=lerp(y0,E.y,ease(u))+Math.sin(u*Math.PI*fq+t*sp+s.ph)*ax*Math.sin(u*Math.PI);if(j===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)}
+    ctx.strokeStyle='rgba(190,215,255,'+((.10+.55*(1-chaos))*beamA).toFixed(3)+')';ctx.lineWidth=1+(1-chaos)*.8;ctx.stroke()}
+  if(chaos<.5){var ba=(1-chaos*2)*beamA;ctx.save();ctx.shadowBlur=26;ctx.shadowColor='rgba(147,197,253,.95)';ctx.strokeStyle='rgba(255,255,255,'+(.85*ba).toFixed(3)+')';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(x0,E.y);ctx.lineTo(E.x,E.y);ctx.stroke();ctx.restore()}
+  var tx=.575*W;
+  for(var k=0;k<6;k++){var rk=ease(seg(p,.60+k*.045,.80+k*.045));
+    var T={x:tx,y:H*(.19+k*.118)};
+    var c1={x:B.x+.16*W,y:B.y+(k-2.5)*.03*H},c2={x:T.x-.16*W,y:T.y};
+    if(rk>0){ctx.save();ctx.shadowBlur=18;ctx.shadowColor=COLORS[k];ctx.strokeStyle=COLORS[k];ctx.lineWidth=2.6;ctx.beginPath();
+      var n=Math.max(2,Math.round(60*rk));for(var m=0;m<=n;m++){var u=rk*m/n;var x=bez(B.x,c1.x,c2.x,T.x-12,u),y=bez(B.y,c1.y,c2.y,T.y,u);if(m===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)}
+      ctx.stroke();var ex=bez(B.x,c1.x,c2.x,T.x-12,rk),ey=bez(B.y,c1.y,c2.y,T.y,rk);ctx.fillStyle=COLORS[k];ctx.beginPath();ctx.arc(ex,ey,4.2,0,6.283);ctx.fill();ctx.restore()}
+    var li=outs[k],la=seg(p,.66+k*.045,.80+k*.045);li.style.opacity=la.toFixed(3);li.style.left=(T.x+8)+'px';li.style.top=(T.y-22)+'px';li.style.transform='translate3d('+((1-la)*18)+'px,0,0)';
+    li.style.borderLeft='0';li.firstElementChild.style.borderLeft='4px solid '+COLORS[k];li.firstElementChild.style.paddingLeft='12px'}
+  var a1=1-seg(p,.18,.32);sc1.style.opacity=a1.toFixed(3);sc1.style.transform='translateY(calc(-52% - '+((1-a1)*36)+'px))';sc1.style.pointerEvents=a1<.3?'none':'auto';sc1.classList.toggle('gone',a1<.01);
+  var a2=Math.min(seg(p,.30,.38),1-seg(p,.52,.60));cap2.style.opacity=a2.toFixed(3);cap2.style.transform='translateY('+((1-seg(p,.30,.38))*24)+'px)';
+  var a3=seg(p,.60,.70);cap3.style.opacity=a3.toFixed(3);cap3.style.transform='translateY('+((1-a3)*24)+'px)';
+  var a4=seg(p,.90,.98);fcta.style.opacity=a4.toFixed(3);fcta.style.pointerEvents=a4>.5?'auto':'none';
+  var sc=p<.3?'A/01 · The tangle':(p<.58?'A/01 · One beam':'A/01 · The spectrum');if(sc!==storyCode){storyCode=sc;hud()}
+}
+var storyCode='';var inView=true;if('IntersectionObserver' in window)new IntersectionObserver(function(es){inView=es[0].isIntersecting;if(inView&&active()&&!raf)raf=requestAnimationFrame(frame)},{rootMargin:'200px'}).observe(story);
+/* HUD: tone, section code, scroll percent, Toronto time */
+var secs=$$('[data-tone]').filter(function(e){return e.tagName!=='BODY'});
+function hud(){
+  var y=window.innerHeight*.5,cur2=secs[0];
+  secs.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<=y)cur2=e});
+  if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2)cur2=secs[secs.length-1];
+  document.body.setAttribute('data-tone',cur2.getAttribute('data-tone'));
+  var code=(cur2===story&&root.classList.contains('js-story')&&storyCode)?storyCode:cur2.getAttribute('data-code');
+  if(hudCode.textContent!==code.replace(/&middot;/g,'·'))hudCode.innerHTML=code;
+  var max=document.documentElement.scrollHeight-window.innerHeight,pc=max>0?Math.round(clamp(window.scrollY/max,0,1)*100):0;
+  hudPct.textContent=('00'+pc).slice(-3);
+}
+function clock(){try{hudTime.textContent=new Intl.DateTimeFormat('en-CA',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'America/Toronto'}).format(new Date())}catch(e){hudTime.textContent=''}}
+window.addEventListener('scroll',hud,{passive:true});window.addEventListener('resize',function(){size();hud()});clock();setInterval(clock,20000);
+mqWide.addEventListener&&mqWide.addEventListener('change',setMode);mqMotion.addEventListener&&mqMotion.addEventListener('change',setMode);
+setMode();hud();
+/* tilt and glare on the six tiles */
+if(canHover.matches&&mqMotion.matches){$$('.tilt').forEach(function(el){
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    el.style.setProperty('--ry',((x-.5)*10).toFixed(2)+'deg');el.style.setProperty('--rx',((.5-y)*8).toFixed(2)+'deg');el.style.setProperty('--gx',(x*100).toFixed(1)+'%');el.style.setProperty('--gy',(y*100).toFixed(1)+'%')});
+  el.addEventListener('pointerleave',function(){el.style.setProperty('--ry','0deg');el.style.setProperty('--rx','0deg')})})}
+/* touch: tap an underlined word to open its picture */
+$$('.peek').forEach(function(p){p.addEventListener('click',function(e){e.stopPropagation();var o=p.classList.contains('open');$$('.peek.open').forEach(function(x){x.classList.remove('open')});if(!o)p.classList.add('open')})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')$$('.peek.open').forEach(function(x){x.classList.remove('open')})});
+document.addEventListener('click',function(){$$('.peek.open').forEach(function(x){x.classList.remove('open')})});
+})();
+
+(function(){
+var root=document.documentElement,btn=document.getElementById('themeBtn'),meta=document.querySelector('meta[name="theme-color"]');
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+function label(){var d=root.getAttribute('data-theme')==='dark';btn.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');btn.setAttribute('aria-pressed',d?'true':'false');if(meta)meta.setAttribute('content',d?'#060B1B':'#1E40AF')}
+function apply(t){root.setAttribute('data-theme',t);try{localStorage.setItem('alia-theme',t)}catch(e){}label()}
+label();
+btn.addEventListener('click',function(){
+  var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  if(!document.startViewTransition||reduce.matches){apply(next);return}
+  var r=btn.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,rad=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+  var tr=document.startViewTransition(function(){apply(next)});
+  tr.ready.then(function(){root.animate({clipPath:['circle(0px at '+x+'px '+y+'px)','circle('+rad+'px at '+x+'px '+y+'px)']},{duration:700,easing:'cubic-bezier(.4,0,.2,1)',pseudoElement:'::view-transition-new(root)'})}).catch(function(){});
+});
+/* count-up */
+var cnts=[].slice.call(document.querySelectorAll('.cnt'));
+function run(el){var from=+el.getAttribute('data-from')||0,to=+el.getAttribute('data-to'),t0=null,dur=1500;
+  function step(ts){if(t0===null)t0=ts;var u=Math.min(1,(ts-t0)/dur),e=1-Math.pow(1-u,3);el.textContent=Math.round(from+(to-from)*e);if(u<1)requestAnimationFrame(step)}
+  el.textContent=from;requestAnimationFrame(step)}
+if(!reduce.matches&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.6});cnts.forEach(function(c){io.observe(c)})}
+})();
 </script>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "25c4e086040f49b3b7bdf7e4550e1548"}'></script>
 </body>
