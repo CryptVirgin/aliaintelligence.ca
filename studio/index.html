@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Studio | ALIA Intelligence Inc.</title>
+<meta name="description" content="Made entirely with AI: every character, voice and picture. Story ideas and creative direction are human. See the work, learn how it is made, or hire ALIA to run it for you." />
+<meta name="author" content="ALIA Intelligence Inc." />
+<link rel="canonical" href="https://aliaintelligence.ca/studio/" />
+<meta property="og:title" content="Studio | ALIA Intelligence Inc." />
+<meta property="og:description" content="Made entirely with AI: every character, voice and picture. Story ideas and creative direction are human. Courses, and a managed service that runs it for you." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aliaintelligence.ca/studio/" />
+<meta property="og:site_name" content="ALIA Intelligence Inc." />
+<meta property="og:image" content="https://aliaintelligence.ca/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#1E40AF" />
+<meta name="color-scheme" content="light dark" />
+<script>try{var t=localStorage.getItem("alia-theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --sapphire:#1E40AF; --sky:#60A5FA; --navy:#0F172A; --charcoal:#6B7280; --ink:#1E293B;
+  --red:#EF4444; --orange:#F97316; --amber:#F59E0B; --green:#10B981; --cyan:#22D3EE; --blue:#3B82F6; --violet:#8B5CF6; --pink:#EC4899;
+  --tint:#F4F8FF; --line:#E2EBFA; --white:#FFFFFF;
+  --spectrum:linear-gradient(90deg,#EF4444,#F97316,#F59E0B,#10B981,#22D3EE,#3B82F6,#8B5CF6);
+  --night:#060B1B;--mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:Montserrat,Inter,sans-serif;color:var(--navy);letter-spacing:-.02em;line-height:1.1}
+.grad{background:linear-gradient(90deg,var(--sapphire),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px Inter;padding:15px 26px;border-radius:12px;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
+.btn.pri{background:var(--sapphire);color:#fff;box-shadow:0 10px 26px rgba(30,64,175,.3)}
+.btn.pri:hover{transform:translateY(-2px);background:#2347c9}
+.btn.sec{background:#fff;color:var(--sapphire);border-color:var(--line)}
+.btn.sec:hover{border-color:var(--sky);transform:translateY(-2px)}
+body[data-tone="dark"]{--fg:#fff;--fg2:#B6C4E0;--hl:rgba(255,255,255,.18);--navbg:rgba(6,11,27,.55);--hudbg:rgba(6,11,27,.92)}
+body[data-tone="light"]{--fg:var(--navy);--fg2:#475569;--hl:rgba(15,23,42,.16);--navbg:rgba(255,255,255,.82);--hudbg:rgba(255,255,255,.94)}
+.label{font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--sapphire)}
+.story .label,.spec .label,.contact .label{color:#93C5FD}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--navbg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:background .35s}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:14px}.brand img{height:46px;width:auto}
+.brand b{display:block;font:800 21px Montserrat;letter-spacing:.3em;color:var(--fg,var(--navy));line-height:1;transition:color .35s}
+.brand span{display:block;font:500 10.5px Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--fg2,var(--charcoal));margin-top:5px;transition:color .35s}
+.links{display:flex;align-items:center;gap:30px;font:500 15px Inter;color:var(--fg,var(--ink));transition:color .35s}
+.links a:hover{color:var(--sky)}
+.links .btn{padding:11px 20px;font-size:15px;white-space:nowrap;color:#fff}
+/* HUD */
+.hud{position:fixed;inset:12px;z-index:55;pointer-events:none;border:1px solid var(--hl);transition:border-color .35s}
+.hud-bar{position:absolute;left:0;right:0;bottom:0;height:42px;background:var(--hudbg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 22px;font:500 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg2);transition:color .35s}
+.hud-bar b{font-weight:500;color:var(--fg);transition:color .35s}
+.hud-bar span{display:inline-flex;gap:12px;white-space:nowrap}
+.hud-bar .ai b{color:#F59E0B}
+html[data-theme="dark"] .hud-bar .ai b{color:#FBBF24}
+body[data-tone="light"] .hud-bar .ai b{color:#B45309}
+html[data-theme="dark"] body[data-tone="light"] .hud-bar .ai b{color:#FBBF24}
+/* story (hero) */
+.story{position:relative;background:var(--night);color:#fff}
+.story-pin{position:relative;padding:150px 0 110px;overflow:hidden}
+.story-pin::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 600px at 72% 42%,rgba(37,99,235,.28),rgba(6,11,27,0) 65%)}
+#film{display:none;position:absolute;inset:0;pointer-events:none}
+.story-grid{position:relative}
+.status{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--hl);border-radius:999px;padding:8px 16px;font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#CFE0FF}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(245,158,11,.22)}
+.story h1{font-size:clamp(44px,6.2vw,92px);font-weight:800;margin:26px 0 24px;color:#fff;line-height:1.02}
+.story h1 .grad{background:linear-gradient(90deg,#93C5FD,#60A5FA);-webkit-background-clip:text;background-clip:text;color:transparent}
+.story .lead{font-size:19px;color:#C5D3EE;max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.story .btn.sec{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.story .btn.sec:hover{border-color:var(--sky)}
+.proof{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#9FB4DA}
+.proof span::before{content:"";display:inline-block;width:7px;height:7px;margin-right:9px;background:var(--sky);transform:rotate(45deg)}
+.story-caps{display:none}
+.stackfilms{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}
+.stackfilms img{width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.14)}
+.outs{list-style:none;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px}
+.outs li{border-left:5px solid var(--c);padding:6px 0 6px 16px}
+.outs b{display:block;font:800 19px Montserrat;color:#fff}
+.outs span{display:block;font-size:15px;color:#B6C4E0;margin-top:3px}
+.final-cta{display:none;position:absolute;left:max(6vw,48px);bottom:11vh;gap:14px;opacity:0;pointer-events:none}
+/* story, pinned (wide screens with motion allowed) */
+.js-story .story{height:420vh}
+.js-story .story-pin{position:sticky;top:0;height:100vh;padding:0}
+.js-story #film{display:block}
+.js-story .story-grid{position:absolute;inset:0;width:auto;margin:0}
+.js-story .stackfilms{display:none}
+.js-story .story-copy{position:absolute;left:max(6vw,48px);top:55%;width:min(46vw,640px);transform:translateY(-52%);will-change:opacity,transform}
+.js-story .story h1{font-size:clamp(36px,min(6.2vw,9.2vh),92px);margin:clamp(14px,3vh,26px) 0 clamp(12px,2.6vh,24px)}
+.js-story .story .lead{font-size:clamp(15px,2.2vh,19px)}
+.js-story .cta{margin-top:clamp(16px,3.4vh,34px)}
+.js-story .proof{margin-top:clamp(14px,3vh,34px)}
+@media (max-height:700px){.js-story .proof{display:none}}
+.js-story .story-caps{display:block}
+.js-story .story-caps p{position:absolute;left:max(6vw,48px);top:34vh;width:min(32vw,460px);font:800 clamp(30px,3.5vw,54px)/1.05 Montserrat;color:#fff;opacity:0;will-change:opacity,transform}
+.js-story .story-caps p em{font-style:normal;color:#93C5FD}
+.js-story .outs{position:absolute;inset:0;display:block;margin:0;pointer-events:none}
+.js-story .outs li{position:absolute;width:min(26vw,380px);opacity:0;border:0;padding:0;will-change:opacity,transform}
+.js-story .outs b{font-size:clamp(15px,1.35vw,21px)}
+.js-story .outs span{font-size:clamp(12px,1vw,14.5px)}
+.js-story .final-cta{display:flex}
+.gone .status,.gone .lead,.gone .cta,.gone .proof{visibility:hidden}
+/* sections */
+section{padding:112px 0}
+section[id]{scroll-margin-top:20px}
+.head{max-width:760px;margin-bottom:56px}
+.head h2{font-size:clamp(34px,4.4vw,56px);font-weight:800;margin:16px 0 16px}
+.head p{font-size:18px;color:#475569}
+.big{font-size:clamp(20px,2.1vw,27px);line-height:1.5;color:var(--ink);max-width:900px}
+/* the line */
+.line h2{font-size:clamp(38px,6vw,88px);font-weight:800;letter-spacing:-.035em;line-height:1;margin:16px 0 28px;max-width:1000px}
+.line .big{margin-bottom:12px}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px}
+.nums div{padding-top:18px;border-top:4px solid var(--c,var(--sapphire))}
+.nums b{display:block;font:800 clamp(54px,7.6vw,112px)/1 Montserrat;letter-spacing:-.04em;color:var(--sapphire);font-variant-numeric:tabular-nums}
+.nums span{display:block;margin-top:8px;font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal)}
+/* the work */
+.work{background:var(--tint)}
+.world{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
+.world:first-of-type{border-top:0;padding-top:0}
+.world.flip{grid-template-columns:.85fr 1.15fr}
+.world.flip .wmedia{order:2}
+.wmedia{display:grid;gap:12px}
+.wmedia .pics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.wmedia .pics img,.yt{border-radius:16px;border:1px solid var(--line)}
+.wmedia .pics img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.yt{position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;padding:0;cursor:pointer;background:#000;box-shadow:0 18px 44px rgba(30,64,175,.14)}
+.yt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;border-radius:0;transition:transform .5s,filter .3s}
+.yt:hover img{transform:scale(1.03);filter:brightness(1.08)}
+.yt .play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(6,11,27,.72);border:2px solid rgba(255,255,255,.85);display:grid;place-items:center;transition:transform .25s,background .25s}
+.yt:hover .play{transform:scale(1.1);background:var(--sapphire)}
+.yt .play svg{width:30px;height:30px;fill:#fff;margin-left:4px}
+.yt .tag{position:absolute;left:0;bottom:0;right:0;text-align:left;font:600 14px Inter;color:#fff;padding:26px 16px 12px;background:linear-gradient(0deg,rgba(6,11,27,.88),rgba(6,11,27,0))}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.wtext h3{font-size:clamp(30px,3.4vw,46px);font-weight:800;margin:14px 0 14px}
+.wtext p{font-size:17.5px;color:#475569;margin-bottom:14px;max-width:520px}
+.listen{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.listen a{font:600 14px Inter;color:var(--sapphire);background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;transition:border-color .2s,transform .2s}
+.listen a:hover{border-color:var(--sky);transform:translateY(-2px)}
+.listen small{flex-basis:100%;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal)}
+.single{height:auto;border-radius:16px;border:1px solid var(--line);width:100%}
+/* how it is made */
+.acts{list-style:none;margin-top:12px;border-top:1px solid var(--line)}
+.act{position:relative;display:grid;grid-template-columns:90px 1.2fr 1fr 220px;gap:24px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);overflow:hidden}
+.act::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--c);opacity:.12;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.act:hover::before,.act:focus-within::before{width:100%}
+.act-n{position:relative;font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal)}
+.act h3{position:relative;font-size:clamp(40px,5.4vw,84px);font-weight:800;letter-spacing:-.035em;line-height:.98;color:var(--navy);transition:color .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.act:hover h3,.act:focus-within h3{color:var(--c);transform:translateX(10px)}
+.act p{position:relative;font-size:17px;color:#475569;max-width:400px}
+.act p::before{content:"";display:block;width:42px;height:6px;border-radius:3px;background:var(--c);margin-bottom:14px}
+.act img{position:relative;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.note{margin-top:26px;font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal);max-width:900px;line-height:1.7}
+/* offers */
+.spec{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.spec::before{content:"";position:absolute;inset:0;background:radial-gradient(1000px 520px at 15% 0%,rgba(37,99,235,.24),rgba(6,11,27,0) 65%)}
+.spec .wrap{position:relative}
+.spec h2{color:#fff}.spec .head p{color:#B6C4E0}
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:22px;perspective:1200px}
+.tile{--rx:0deg;--ry:0deg;--gx:50%;--gy:0%;position:relative;padding:38px 36px 36px;border-radius:24px;background:color-mix(in srgb,var(--c) 18%,#0B1329);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);overflow:hidden;transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,background .3s;display:flex;flex-direction:column}
+.tile:hover{border-color:var(--c);background:color-mix(in srgb,var(--c) 30%,#0B1329)}
+.tile::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(360px circle at var(--gx) var(--gy),rgba(255,255,255,.22),transparent 60%);opacity:0;transition:opacity .3s}
+.tile:hover::after{opacity:1}
+.tile i{display:block;width:46px;height:8px;border-radius:4px;background:var(--c);margin-bottom:22px}
+.tile h3{color:#fff;font-size:clamp(30px,3vw,40px);font-weight:800;margin-bottom:12px}
+.tile p{color:#D2DDF2;font-size:17px;margin-bottom:16px}
+.tile ul{list-style:none;margin:6px 0 28px;display:grid;gap:10px}
+.tile li{color:#E3EAF8;font-size:16px;padding-left:22px;position:relative}
+.tile li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;background:var(--c);transform:rotate(45deg)}
+.tile .btn{margin-top:auto;align-self:flex-start}
+.tile .btn.sec{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.tile .btn.sec:hover{border-color:var(--c)}
+.spec .why{max-width:640px;margin-top:40px;font-size:17px;color:#9FB4DA}
+/* contact */
+.contact{background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 60%,#1E40AF 100%);color:#fff;position:relative;overflow:hidden}
+.contact::after{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--spectrum)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contact h2{color:#fff;font-size:clamp(34px,4.4vw,54px);font-weight:800;margin:16px 0 18px}
+.contact p{font-size:18px;color:#CBD5E1}
+.form{background:#fff;border-radius:24px;padding:34px;color:var(--ink);box-shadow:0 30px 70px rgba(0,0,0,.28);--navy:#0F172A;--ink:#1E293B;--line:#E2EBFA}
+.form h3{font-size:22px;font-weight:800;margin-bottom:18px;color:#0F172A}
+.form .r{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form input,.form textarea,.form select{width:100%;font:500 16px Inter;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;background:#F8FAFF;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s}
+.form select{margin-bottom:12px;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#6B7280 50%),linear-gradient(135deg,#6B7280 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--sky);box-shadow:0 0 0 4px rgba(96,165,250,.2);background:#fff}
+.form textarea{min-height:120px;resize:vertical;margin-bottom:14px}
+.form .btn{width:100%;justify-content:center}
+.fs{margin-top:12px;font-size:14.5px;min-height:20px}.fs.ok{color:#047857}.fs.err{color:#B91C1C}
+.mail{margin-top:26px;font:600 16px Inter;color:#BFDBFE}.mail a{color:#fff;border-bottom:2px solid rgba(255,255,255,.35)}
+/* footer */
+footer{background:#fff;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px 34px;align-items:center;justify-content:space-between;padding:30px 0;font:500 14.5px Inter;color:var(--charcoal)}
+footer .brand img{height:38px}
+footer .brand b{color:var(--navy)}footer .brand span{color:var(--charcoal)}
+footer a:hover{color:var(--sapphire)}
+.fl{display:flex;gap:24px;flex-wrap:wrap}
+.ailine{flex-basis:100%;font:600 15px Inter;color:var(--navy);padding:14px 18px;border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:12px;background:var(--tint)}
+@media (min-width:981px){footer{padding-bottom:60px}}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+/* skip link, focus */
+.skip{position:fixed;left:16px;top:-60px;z-index:100;background:var(--sapphire);color:#fff;padding:12px 18px;border-radius:10px;font:600 15px Inter;transition:top .2s}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+/* theme toggle */
+.tt{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--hl);background:transparent;color:var(--fg,var(--navy));display:grid;place-items:center;cursor:pointer;transition:border-color .2s,transform .2s}
+.tt:hover{border-color:var(--sky);transform:rotate(18deg)}
+.tt svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tt .moon{display:none}
+html[data-theme="dark"] .tt .sun{display:none}html[data-theme="dark"] .tt .moon{display:block}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-old(root){z-index:1}::view-transition-new(root){z-index:2}
+/* dark theme for the light sections */
+html[data-theme="dark"]{color-scheme:dark;--ink:#E3EAF8;--navy:#F3F7FF;--tint:#0A1126;--line:#1E2B4D;--charcoal:#9FB1D3;--white:#0F1A33}
+html[data-theme="dark"] body{background:#060B1B;color:var(--ink)}
+html[data-theme="dark"] body[data-tone="light"]{--fg:#fff;--fg2:#B6C4E0;--hl:rgba(255,255,255,.18);--navbg:rgba(6,11,27,.66);--hudbg:rgba(6,11,27,.92)}
+html[data-theme="dark"] .head p,html[data-theme="dark"] .act p,html[data-theme="dark"] .wtext p{color:#B6C4E0}
+html[data-theme="dark"] .big{color:#E3EAF8}
+html[data-theme="dark"] .label{color:#93C5FD}
+html[data-theme="dark"] .listen a{background:#0F1A33;border-color:var(--line);color:#BFD6FF}
+html[data-theme="dark"] .btn.sec{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+html[data-theme="dark"] footer{background:#060B1B;border-top-color:var(--line);color:#9FB1D3}
+html[data-theme="dark"] .ailine{background:#0F1A33;color:#F3F7FF}
+html[data-theme="dark"] .nums b{color:#93C5FD}
+html[data-theme="dark"] .yt{box-shadow:none}
+@media (max-width:980px){
+ .hud{display:none}
+ .links a:not(.btn){display:none}section{padding:76px 0}
+ .world,.world.flip{grid-template-columns:1fr;gap:26px}.world.flip .wmedia{order:0}
+ .act{grid-template-columns:1fr;gap:10px;padding:26px 0}.act h3{font-size:clamp(46px,14vw,86px)}.act img{max-width:420px}
+ .offers{grid-template-columns:1fr}
+ .contact .wrap{grid-template-columns:1fr}
+ .outs{grid-template-columns:1fr}
+ .story-pin{padding:116px 0 72px}
+}
+@media (max-width:760px){.nums{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.brand span{display:none}.links .btn{padding:10px 16px;font-size:14px}.brand b{font-size:19px}.form .r{grid-template-columns:1fr}.stackfilms{grid-template-columns:1fr 1fr}.wmedia .pics{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.tile,.act::before,.act h3,.yt img,.tt{transition:none}.tt:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Primary"><div class="wrap">
+  <a class="brand" href="../" aria-label="ALIA Intelligence home"><img src="../assets/alia-mark-sm.png" alt="" width="56" height="46" /><div><b>ALIA</b><span>Intelligence Inc.</span></div></a>
+  <div class="links"><a href="#work">The work</a><a href="#how">How it is made</a><a href="#offers">Offers</a><button class="tt" id="themeBtn" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button><a class="btn pri" href="#contact">Contact us</a></div>
+</div></nav>
+
+<div class="hud" aria-hidden="true"><div class="hud-bar"><span><b id="hudCode">S/01 &middot; The script</b></span><span class="ai"><b>Made entirely with AI</b></span><span>Scroll <b id="hudPct">000</b>%</span><span>Toronto <b id="hudTime">--:--</b></span></div></div>
+
+<main id="main">
+<header class="story" id="top" data-tone="dark" data-code="S/01 &middot; The script"><div class="story-pin">
+  <canvas id="film" aria-hidden="true"></canvas>
+  <div class="wrap story-grid">
+    <div class="story-copy" id="sc1">
+      <div class="status"><i></i>Made entirely with AI</div>
+      <h1>One script.<br><span class="grad">Every screen.</span></h1>
+      <p class="lead">Elsie, The Overnight Desk and The Mosho are made entirely with AI: every character, voice and picture. The ideas and the direction are human. Scroll to watch one script become a finished show, then see how we can make one for you.</p>
+      <div class="cta"><a class="btn pri" href="#work">See the work &rarr;</a><a class="btn sec" href="#contact">Contact us</a></div>
+      <div class="proof"><span>4K pictures</span><span>Natural voice</span><span>Every platform</span></div>
+    </div>
+    <div class="stackfilms" aria-hidden="true">
+      <img src="assets/e05-s1.webp" alt="" width="1280" height="714" loading="lazy" /><img src="assets/e05-s2.webp" alt="" width="1280" height="714" loading="lazy" /><img src="assets/e05-s3.webp" alt="" width="1280" height="714" loading="lazy" />
+      <img src="assets/e05-s7.webp" alt="" width="1280" height="714" loading="lazy" /><img src="assets/e05-s10.webp" alt="" width="1280" height="714" loading="lazy" /><img src="assets/e05-s14.webp" alt="" width="1280" height="714" loading="lazy" />
+    </div>
+  </div>
+  <div class="story-caps" aria-hidden="true"><p id="cap2">The script becomes <em>pictures.</em></p><p id="cap3">Then a <em>voice.</em></p><p id="cap4">Then <em>every screen.</em></p></div>
+  <ul class="outs" id="outs">
+    <li style="--c:var(--red)"><b>YouTube</b><span>Full 4K episodes and Shorts</span></li>
+    <li style="--c:var(--orange)"><b>Spotify</b><span>Video podcasts</span></li>
+    <li style="--c:var(--amber)"><b>Apple Podcasts</b><span>Audio, from the same feed</span></li>
+    <li style="--c:var(--green)"><b>Amazon Music</b><span>Audio, from the same feed</span></li>
+    <li style="--c:var(--cyan)"><b>Instagram</b><span>Reels and stories</span></li>
+    <li style="--c:var(--blue)"><b>TikTok</b><span>Vertical clips</span></li>
+    <li style="--c:var(--violet)"><b>Facebook</b><span>Page posts and reels</span></li>
+    <li style="--c:var(--pink)"><b>X</b><span>Short clips and links</span></li>
+  </ul>
+  <div class="final-cta" id="fcta"><a class="btn pri" href="#work">See the work &rarr;</a><a class="btn sec" href="#contact">Contact us</a></div>
+</div></header>
+
+<section class="line" id="line" data-tone="light" data-code="S/02 &middot; The line"><div class="wrap">
+  <div class="label rv">( The line )</div>
+  <h2 class="rv"><span class="grad">Made entirely with AI.</span></h2>
+  <p class="big rv">Every character, voice and picture you see here is made with AI. The story ideas and the creative direction are human. That line goes on every page, in every description and on every platform, and it does not come off.</p>
+  <div class="nums" aria-label="The studio in numbers">
+    <div style="--c:var(--red)"><b class="cnt" data-to="3">3</b><span>Shows</span></div>
+    <div style="--c:var(--green)"><b class="cnt" data-to="5">5</b><span>Steps from script to screen</span></div>
+    <div style="--c:var(--blue)"><b class="cnt" data-to="8">8</b><span>Platforms</span></div>
+    <div style="--c:var(--violet)"><b class="cnt" data-to="1">1</b><span>Line we never drop</span></div>
+  </div>
+</div></section>
+
+<section class="work" id="work" data-tone="light" data-code="S/03 &middot; The work"><div class="wrap">
+  <div class="head rv"><div class="label">( The work )</div><h2>Three shows. All real. All made with AI.</h2><p>Newer episodes use native 4K pictures and a natural voice recorded in one take per scene. Everything below is live today.</p></div>
+
+  <article class="world rv">
+    <div class="wmedia">
+      <button class="yt" type="button" data-id="I1c6Q4O_MqA" data-title="The Long Hallway, Three A.M. Stories, episode 1" aria-label="Play The Long Hallway, Three A.M. Stories"><img src="assets/e02-hallway.webp" alt="" width="1344" height="768" loading="lazy" /><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="tag">The Long Hallway &middot; Three A.M. Stories</span></button>
+      <div class="pics"><img src="assets/e05-s3.webp" alt="An old brick apartment building at night with five lit windows" width="1280" height="714" loading="lazy" /><img src="assets/e05-s7.webp" alt="A woman writing at a desk lamp in a lit window" width="1280" height="714" loading="lazy" /><img src="assets/e05-s14.webp" alt="Elsie's reflection in a dark window with a small lamp behind her" width="1280" height="714" loading="lazy" /></div>
+    </div>
+    <div class="wtext"><div class="label">( Elsie Elsewhen )</div><h3>Three A.M. Stories</h3>
+      <p>Quiet bedtime stories for people who cannot sleep, told by Elsie, an AI character from another timeline. A natural low voice, one small thing that happened, told softly. Elsewhen is her longer podcast. Newer episodes use native 4K pictures.</p>
+      <div class="listen"><small>Listen and watch</small>
+        <a href="https://open.spotify.com/show/6MmXzHY18vqyM2ajN9BcTg" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://podcasts.apple.com/us/podcast/three-a-m-stories/id6834638032" target="_blank" rel="noopener">Apple Podcasts</a>
+        <a href="https://music.amazon.com/podcasts/624c71a4-c771-409a-bc5f-501e240321ac" target="_blank" rel="noopener">Amazon Music</a>
+        <a href="https://youtu.be/I1c6Q4O_MqA" target="_blank" rel="noopener">YouTube: The Long Hallway</a>
+        <a href="https://youtu.be/c3lb3-V8290" target="_blank" rel="noopener">YouTube: Thirteen Cracks</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="world flip rv">
+    <div class="wmedia">
+      <button class="yt" type="button" data-id="c3lb3-V8290" data-title="Thirteen Cracks, Three A.M. Stories, episode 2" aria-label="Play Thirteen Cracks, Three A.M. Stories"><img src="assets/e03-cracks.webp" alt="" width="1344" height="768" loading="lazy" /><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="tag">Thirteen Cracks &middot; Three A.M. Stories</span></button>
+      <div class="pics"><img src="assets/a-pencil.webp" alt="A dim bedroom with a bookshelf and a lamp" width="1280" height="714" loading="lazy" /><img src="assets/a-hour.webp" alt="A blue-grey bedroom with a clock, a plant and a lizard tank" width="1280" height="714" loading="lazy" /><img src="assets/a-radiator.webp" alt="A bedroom with an old radiator under a window" width="1280" height="714" loading="lazy" /></div>
+    </div>
+    <div class="wtext"><div class="label">( In production )</div><h3>New stories, every week</h3>
+      <p>The next three stories and a ten minute Elsewhen episode are scripted, with their rooms already drawn. A story is three to five minutes. The podcast runs ten to fifteen. Each new episode gets its own pictures.</p>
+    </div>
+  </article>
+
+  <article class="world rv">
+    <div class="wmedia">
+      <button class="yt" type="button" data-id="cbLEmAwjqdI" data-title="The Overnight Desk, episode 1" aria-label="Play The Overnight Desk episode 1"><img src="assets/d-ep1.webp" alt="" width="1280" height="720" loading="lazy" /><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="tag">The Overnight Desk &middot; Episode 1</span></button>
+      <div class="pics"><img src="assets/d-face.webp" alt="A cartoon caller waving at the help desk" width="1280" height="720" loading="lazy" /><img src="assets/d-nine.webp" alt="A cartoon caller at an office" width="1280" height="720" loading="lazy" /><img src="assets/d-cast.webp" alt="Mo the owl, Pip the squirrel and Unit 7 the robot" width="1280" height="720" loading="lazy" /></div>
+    </div>
+    <div class="wtext"><div class="label">( The Overnight Desk )</div><h3>A help line open all night</h3>
+      <p>An AI comedy cartoon. Mo the owl, Pip the squirrel and Unit 7 the robot take your calls, and every problem is a tomorrow problem. Short episodes, new ones all the time.</p>
+      <div class="listen"><small>Watch</small><a href="https://www.youtube.com/@OvernightDeskShow" target="_blank" rel="noopener">YouTube channel</a></div>
+    </div>
+  </article>
+
+  <article class="world flip rv">
+    <div class="wmedia"><img class="single" src="assets/m-cards.webp" alt="Episode cards for The Mosho: an owl and four short lines from a caller" width="1200" height="533" loading="lazy" /></div>
+    <div class="wtext"><div class="label">( The Mosho )</div><h3>A late night call-in show</h3>
+      <p>Mo the owl runs a quiet late-night call-in show about small communication problems, one caller at a time. Short story episodes, plus a free practice course for saying it out loud on your phone.</p>
+      <div class="listen"><small>Listen</small><a href="https://open.spotify.com/show/56ktbiVkijC89NAVUT9QVL" target="_blank" rel="noopener">Spotify</a><a href="https://www.youtube.com/@OvernightDeskShow" target="_blank" rel="noopener">YouTube: podcasts and courses</a></div>
+    </div>
+  </article>
+</div></section>
+
+<section id="how" data-tone="light" data-code="S/04 &middot; How it is made"><div class="wrap">
+  <div class="head rv"><div class="label">( How it is made )</div><h2>Five steps from an idea to every screen.</h2><p>The same pipeline runs every show. Each step has a check before the next one starts.</p></div>
+  <ol class="acts">
+    <li class="act rv" style="--c:var(--red)" tabindex="0"><span class="act-n">Step 1</span><h3>Script</h3><p>A human idea and direction, a full end to end script, read and approved before any picture exists.</p><img src="assets/a-radiator.webp" alt="A bedroom with an old radiator, the first picture of a story about a knock" width="1280" height="714" loading="lazy" /></li>
+    <li class="act rv" style="--c:var(--orange)" tabindex="0"><span class="act-n">Step 2</span><h3>Pictures</h3><p>Native 4K pictures, drawn to match the words, with layout guides so a building has the right number of windows.</p><img src="assets/e05-s3.webp" alt="A brick building with forty-two windows, five of them lit" width="1280" height="714" loading="lazy" /></li>
+    <li class="act rv" style="--c:var(--green)" tabindex="0"><span class="act-n">Step 3</span><h3>Voice</h3><p>One natural take per scene, checked word by word against the script, never stitched line by line.</p><img src="assets/e05-s2.webp" alt="Elsie at her window at night, hand on the curtain" width="1280" height="714" loading="lazy" /></li>
+    <li class="act rv" style="--c:var(--blue)" tabindex="0"><span class="act-n">Step 4</span><h3>Video</h3><p>Slow movement and long dissolves, built in 4K, then checked against each platform's rules before it ships.</p><img src="assets/e05-s15.webp" alt="A pale plaster building with one small warm window lit" width="1280" height="714" loading="lazy" /></li>
+    <li class="act rv" style="--c:var(--violet)" tabindex="0"><span class="act-n">Step 5</span><h3>Publish</h3><p>Reviewed privately, then released on every platform together, with the AI line on all of them.</p><img src="assets/e05-s10.webp" alt="A hand with fingertips on a cold window pane at night" width="1280" height="714" loading="lazy" /></li>
+  </ol>
+  <p class="note rv">Every picture on this page comes from our own shows. No stock photos, no borrowed characters.</p>
+</div></section>
+
+<section class="spec" id="offers" data-tone="dark" data-code="S/05 &middot; Offers"><div class="wrap">
+  <div class="head rv"><div class="label">( Offers )</div><h2>Learn it, or have us run it.</h2><p>Two ways to work with ALIA on AI content. Pick one, or start with the course and move to the service.</p></div>
+  <div class="offers">
+    <div class="tile tilt rv" style="--c:var(--cyan)"><i></i><h3>Courses</h3><p>Learn how this is all done, on demand, at your own pace.</p>
+      <ul><li>Scripts that read well aloud</li><li>4K pictures that match the words</li><li>Natural voices and the checks that catch mistakes</li><li>Video, publishing and platform rules</li><li>Labelling AI content honestly</li></ul>
+      <a class="btn pri" href="#contact" data-offer="Courses">Contact us about courses</a></div>
+    <div class="tile tilt rv" style="--c:var(--orange)"><i></i><h3>Managed service</h3><p>We run the content for you under contract: full service, and the maintenance that keeps it running.</p>
+      <ul><li>Scripts, pictures, voice and video, end to end</li><li>Publishing and upkeep across your platforms</li><li>Platform rules, reviews and corrections handled</li><li>Clear contract, clear review gates</li><li>Your brand and characters, made with AI</li></ul>
+      <a class="btn pri" href="#contact" data-offer="Managed service">Contact us about the service</a></div>
+  </div>
+  <p class="why rv">No prices on this page. Tell us what you want to make and we will come back with what it takes.</p>
+</div></section>
+
+<section class="contact" id="contact" data-tone="dark" data-code="S/06 &middot; Contact"><div class="wrap">
+  <div class="rv"><div class="label">( Contact )</div><h2>Tell us what you want to make.</h2><p>We take on a limited number of engagements. Courses or the managed service, send a few lines and we will reply.</p><p class="mail">Prefer email? <a href="mailto:info@aliaintelligence.ca">info@aliaintelligence.ca</a></p></div>
+  <form class="form rv" id="contactForm" action="https://formspree.io/f/mkolvwdr" method="POST">
+    <input type="hidden" name="_subject" value="New inquiry from aliaintelligence.ca/studio" />
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <h3>Get in touch</h3>
+    <div class="r"><input type="text" name="name" placeholder="Your name" required aria-label="Your name" /><input type="email" name="email" placeholder="Your email" required aria-label="Your email" /></div>
+    <select name="interest" id="interest" aria-label="What are you interested in"><option value="Not sure yet">Interested in: not sure yet</option><option value="Courses">Courses</option><option value="Managed service">Managed service</option><option value="Both">Both</option></select>
+    <textarea name="message" placeholder="What do you want to make?" required aria-label="What do you want to make?"></textarea>
+    <button class="btn pri" type="submit">Send message &rarr;</button>
+    <p class="fs" id="formStatus" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<footer data-tone="light" data-code="S/07 &middot; The end"><div class="wrap">
+  <p class="ailine">Made entirely with AI: every character, voice and picture. Story ideas and creative direction are human.</p>
+  <a class="brand" href="../"><img src="../assets/alia-mark-sm.png" alt="" width="46" height="38" /><div><b style="font-size:17px">ALIA</b><span>Intelligence Inc.</span></div></a>
+  <div class="fl"><a href="../">ALIA home</a><a href="../privacy.html">Privacy</a><a href="https://www.linkedin.com/company/aliaintelligence/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:info@aliaintelligence.ca">Email</a></div>
+  <span>&copy; <span id="yr">2026</span> ALIA Intelligence Inc.</span>
+</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=((i%4)*70)+'ms';io.observe(el)});
+/* click to load a YouTube embed (privacy friendly) */
+document.querySelectorAll('.yt').forEach(function(b){b.addEventListener('click',function(){
+  var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-id')+'?autoplay=1&rel=0';
+  f.title=b.getAttribute('data-title');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';
+  b.replaceWith((function(){var w=document.createElement('div');w.className='yt';w.appendChild(f);return w})())})});
+/* offer buttons preselect the interest */
+document.querySelectorAll('[data-offer]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('interest');if(s)s.value=a.getAttribute('data-offer')})});
+var cf=document.getElementById('contactForm');
+cf.addEventListener('submit',async function(e){e.preventDefault();var st=document.getElementById('formStatus'),btn=cf.querySelector('button');
+ st.className='fs';st.textContent='Sending...';btn.disabled=true;
+ try{var res=await fetch(cf.action,{method:'POST',body:new FormData(cf),headers:{'Accept':'application/json'}});
+  if(res.ok){cf.reset();st.className='fs ok';st.textContent='Thanks. We will be in touch shortly.'}
+  else{st.className='fs err';st.textContent='Something went wrong. Please email info@aliaintelligence.ca.'}}
+ catch(err){st.className='fs err';st.textContent='Something went wrong. Please email info@aliaintelligence.ca.'}
+ finally{btn.disabled=false}});
+
+(function(){
+var $=function(q,r){return (r||document).querySelector(q)},$$=function(q,r){return Array.prototype.slice.call((r||document).querySelectorAll(q))};
+var clamp=function(v,a,b){return Math.max(a,Math.min(b,v))},lerp=function(a,b,t){return a+(b-a)*t};
+var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+var seg=function(p,a,b){return clamp((p-a)/(b-a),0,1)};
+var mqWide=window.matchMedia('(min-width:900px)'),mqMotion=window.matchMedia('(prefers-reduced-motion: no-preference)');
+var canHover=window.matchMedia('(hover:hover) and (pointer:fine)');
+var root=document.documentElement,story=$('.story'),pin=$('.story-pin'),cv=$('#film'),ctx=cv.getContext('2d');
+var sc1=$('#sc1'),cap2=$('#cap2'),cap3=$('#cap3'),cap4=$('#cap4'),fcta=$('#fcta'),outs=$$('#outs li');
+var COLORS=['#EF4444','#F97316','#F59E0B','#10B981','#22D3EE','#3B82F6','#8B5CF6','#EC4899'];
+var W=0,H=0,dpr=1,cur=0,tgt=0,raf=0,hudCode=$('#hudCode'),hudPct=$('#hudPct'),hudTime=$('#hudTime');
+var IMGS=['e05-s1','e05-s2','e05-s3','e05-s7','e05-s10','e05-s14'].map(function(n){var i=new Image();i.decoding='async';i.src='assets/'+n+'.webp';return i});
+var LW=[];for(var q=0;q<18;q++)LW.push(.42+.58*Math.abs(Math.sin(q*2.31+1.7)));
+var BARS=84,ENV=[];for(var b=0;b<BARS;b++)ENV.push(.30+.70*Math.abs(Math.sin(b*.45)*Math.sin(b*.13+1)));
+function active(){return mqWide.matches&&mqMotion.matches}
+function setMode(){var on=active();root.classList.toggle('js-story',on);if(on){size();if(!raf)raf=requestAnimationFrame(frame)}else{cancelAnimationFrame(raf);raf=0;[sc1,cap2,cap3,cap4,fcta].forEach(function(e){e.removeAttribute('style')});sc1.classList.remove('gone');outs.forEach(function(e){e.removeAttribute('style')})}}
+function size(){W=pin.clientWidth;H=pin.clientHeight;dpr=Math.min(2,window.devicePixelRatio||1);cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px'}
+function progress(){var r=story.getBoundingClientRect(),total=story.offsetHeight-window.innerHeight;return total>0?clamp(-r.top/total,0,1):0}
+function bez(a,b,c,d,t){var u=1-t;return u*u*u*a+3*u*u*t*b+3*u*t*t*c+t*t*t*d}
+function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath()}
+var storyCode='';var inView=true;
+function frame(now){
+  if(!inView){raf=0;return}raf=requestAnimationFrame(frame);
+  tgt=progress();cur+=(tgt-cur)*.14;if(Math.abs(tgt-cur)<.0004)cur=tgt;var p=cur,t=now/1000;
+  /* layout, from the viewport so a short window does not clip */
+  var tr=(Math.max(.06*W,48)+Math.min(.46*W,640))/W+.03;
+  var pgL=Math.max(.50,tr)*W,pgW=Math.min(.36*W,.93*W-pgL),pgT=.15*H,pgH=.70*H;
+  var cr=(Math.max(.06*W,48)+Math.min(.32*W,460))/W+.03;
+  var gx0=Math.max(.42,cr)*W,gap=.014*W,fw=Math.min(.18*W,(.96*W-gx0-2*gap)/3),fh=fw*.558,gy0=.20*H,rg=.03*H;
+  var pw=Math.min(.22*W,.30*H*1.78),pxl=Math.max(.44*W,gx0),pcx=pxl+pw/2,pcy=.46*H,ph=pw*.558;
+  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+  var ph2=ease(seg(p,.62,.82)),idx=ph2*6;
+  /* act 1: the script page, lines appear */
+  var pa=1-ease(seg(p,.30,.48));
+  if(pa>0){
+    ctx.save();ctx.globalAlpha=pa;rr(ctx,pgL,pgT,pgW,pgH,18);ctx.fillStyle='rgba(255,255,255,.05)';ctx.fill();ctx.strokeStyle='rgba(147,197,253,.38)';ctx.lineWidth=1.2;ctx.stroke();
+    var rev=ease(seg(p,.02,.26)),n=18,lh=pgH*.84/17;
+    for(var i=0;i<n;i++){var vis=clamp(rev*(n+2)-i,0,1);if(vis<=0)continue;
+      var y=pgT+pgH*.08+i*lh,w=pgW*.84*LW[i]*vis,hd=(i%6===0);
+      ctx.fillStyle=hd?'#F97316':'rgba(190,215,255,.72)';ctx.shadowBlur=vis<1?14:0;ctx.shadowColor='rgba(147,197,253,.9)';
+      rr(ctx,pgL+pgW*.08,y,w,Math.max(3,pgH*(hd?.022:.016)),3);ctx.fill()}
+    ctx.shadowBlur=0;if(rev<1&&Math.floor(t*2)%2===0){var li=Math.min(n-1,Math.floor(rev*(n+2)));ctx.fillStyle='#93C5FD';ctx.fillRect(pgL+pgW*.08+pgW*.84*LW[li]*clamp(rev*(n+2)-li,0,1)+8,pgT+pgH*.08+li*lh-3,3,pgH*.03)}
+    ctx.restore()}
+  /* act 2 to 4: frames fly out, light up with the voice, collapse into one video */
+  var ac=ease(seg(p,.84,.94));
+  for(var k=0;k<6;k++){
+    var a=ease(seg(p,.32+k*.03,.50+k*.03));if(a<=0)continue;
+    var Tx=gx0+(k%3)*(fw+gap),Ty=gy0+Math.floor(k/3)*(fh+rg);
+    var cx0=pgL+pgW/2,cy0=pgT+pgH*.08+(k*3)*(pgH*.84/17);
+    var cx=lerp(cx0,Tx+fw/2,a),cy=lerp(cy0,Ty+fh/2,a),w=lerp(fw*.18,fw,a);
+    cx=lerp(cx,pcx,ac);cy=lerp(cy,pcy,ac);w=lerp(w,pw,ac);var h=w*.558;
+    var lit=clamp(idx-k+1,0,1),dim=(1-.55*(1-lit)*ease(seg(p,.56,.62)))*(1-ac*.0);
+    var al=a*(k===5?1:1-ac*.9);
+    ctx.save();ctx.globalAlpha=al;rr(ctx,cx-w/2,cy-h/2,w,h,Math.max(6,w*.04));ctx.clip();
+    var im=IMGS[k];if(im.complete&&im.naturalWidth)ctx.drawImage(im,cx-w/2,cy-h/2,w,h);else{ctx.fillStyle='#10204a';ctx.fillRect(cx-w/2,cy-h/2,w,h)}
+    ctx.fillStyle='rgba(6,11,27,'+((1-dim)*.9).toFixed(3)+')';ctx.fillRect(cx-w/2,cy-h/2,w,h);ctx.restore();
+    ctx.save();ctx.globalAlpha=al;rr(ctx,cx-w/2,cy-h/2,w,h,Math.max(6,w*.04));
+    var cur6=(k===Math.floor(idx)&&ph2>0&&ph2<1&&ac<.05);
+    ctx.strokeStyle=cur6?'rgba(255,255,255,.95)':'rgba(147,197,253,.45)';ctx.lineWidth=cur6?2.4:1.2;if(cur6){ctx.shadowBlur=16;ctx.shadowColor='#93C5FD'}ctx.stroke();ctx.restore()}
+  /* act 3: the voice, a waveform with a playhead */
+  var wa=ease(seg(p,.56,.64))*(1-ac);
+  if(wa>0){var wx=gx0,ww=3*fw+2*gap,wy=gy0+2*fh+rg+.115*H,wh=Math.min(.085*H,70);
+    ctx.save();ctx.globalAlpha=wa;
+    for(var b2=0;b2<BARS;b2++){var u=b2/BARS,lt=u<ph2,amp=ENV[b2]*(.75+.25*Math.sin(b2*1.9+t*3.4))*wh,bw=ww/BARS;
+      ctx.fillStyle=lt?'#60A5FA':'rgba(147,197,253,.28)';ctx.fillRect(wx+b2*bw+bw*.18,wy-amp/2,bw*.64,Math.max(2,amp))}
+    ctx.fillStyle='#fff';ctx.fillRect(wx+ww*ph2-1,wy-wh*.7,2,wh*1.4);ctx.restore()}
+  /* act 4: one video, then every screen */
+  if(ac>0){
+    ctx.save();ctx.globalAlpha=ac;ctx.shadowBlur=30;ctx.shadowColor='rgba(96,165,250,.7)';rr(ctx,pcx-pw/2,pcy-ph/2,pw,ph,Math.max(6,pw*.04));ctx.strokeStyle='rgba(255,255,255,.9)';ctx.lineWidth=2;ctx.stroke();ctx.shadowBlur=0;
+    ctx.fillStyle='rgba(6,11,27,.55)';ctx.beginPath();ctx.arc(pcx,pcy,pw*.075,0,6.283);ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke();
+    ctx.fillStyle='#fff';ctx.beginPath();var tr2=pw*.03;ctx.moveTo(pcx-tr2*.7,pcy-tr2*1.1);ctx.lineTo(pcx+tr2*1.2,pcy);ctx.lineTo(pcx-tr2*.7,pcy+tr2*1.1);ctx.closePath();ctx.fill();
+    var by=pcy+ph/2+.05*H;ctx.fillStyle='rgba(147,197,253,.28)';ctx.fillRect(pcx-pw/2,by,pw,4);ctx.fillStyle='#60A5FA';ctx.fillRect(pcx-pw/2,by,pw*(.35+.12*Math.sin(t*.6)),4);ctx.restore()}
+  var tx=.70*W,B={x:pcx+pw/2,y:pcy};
+  for(var m=0;m<8;m++){
+    var rk=ease(seg(p,.86+m*.008,.93+m*.008)),T={x:tx,y:H*(.17+m*.0925)};
+    var c1={x:B.x+.07*W,y:B.y+(m-3.5)*.02*H},c2={x:T.x-.07*W,y:T.y};
+    if(rk>0){ctx.save();ctx.shadowBlur=16;ctx.shadowColor=COLORS[m];ctx.strokeStyle=COLORS[m];ctx.lineWidth=2.4;ctx.beginPath();
+      var nn=Math.max(2,Math.round(50*rk));for(var j=0;j<=nn;j++){var uu=rk*j/nn;var x=bez(B.x,c1.x,c2.x,T.x-12,uu),y=bez(B.y,c1.y,c2.y,T.y,uu);if(j===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)}
+      ctx.stroke();var ex=bez(B.x,c1.x,c2.x,T.x-12,rk),ey=bez(B.y,c1.y,c2.y,T.y,rk);ctx.fillStyle=COLORS[m];ctx.beginPath();ctx.arc(ex,ey,4,0,6.283);ctx.fill();ctx.restore()}
+    var li2=outs[m],la=seg(p,.88+m*.008,.95+m*.008);li2.style.opacity=la.toFixed(3);li2.style.left=(T.x+6)+'px';li2.style.top=(T.y-18)+'px';li2.style.transform='translate3d('+((1-la)*18)+'px,0,0)';
+    li2.firstElementChild.style.borderLeft='4px solid '+COLORS[m];li2.firstElementChild.style.paddingLeft='12px'}
+  var a1=1-seg(p,.16,.30);sc1.style.opacity=a1.toFixed(3);sc1.style.transform='translateY(calc(-52% - '+((1-a1)*36)+'px))';sc1.style.pointerEvents=a1<.3?'none':'auto';sc1.classList.toggle('gone',a1<.01);
+  var a2=Math.min(seg(p,.32,.40),1-seg(p,.52,.58));cap2.style.opacity=a2.toFixed(3);cap2.style.transform='translateY('+((1-seg(p,.32,.40))*24)+'px)';
+  var a3=Math.min(seg(p,.58,.64),1-seg(p,.78,.84));cap3.style.opacity=a3.toFixed(3);cap3.style.transform='translateY('+((1-seg(p,.58,.64))*24)+'px)';
+  var a4=seg(p,.86,.92);cap4.style.opacity=a4.toFixed(3);cap4.style.transform='translateY('+((1-a4)*24)+'px)';
+  var a5=seg(p,.93,.99);fcta.style.opacity=a5.toFixed(3);fcta.style.pointerEvents=a5>.5?'auto':'none';
+  var sc=p<.30?'S/01 · The script':(p<.56?'S/01 · The pictures':(p<.84?'S/01 · The voice':'S/01 · Every screen'));if(sc!==storyCode){storyCode=sc;hud()}
+}
+if('IntersectionObserver' in window)new IntersectionObserver(function(es){inView=es[0].isIntersecting;if(inView&&active()&&!raf)raf=requestAnimationFrame(frame)},{rootMargin:'200px'}).observe(story);
+/* HUD: tone, section code, scroll percent, Toronto time */
+var secs=$$('[data-tone]').filter(function(e){return e.tagName!=='BODY'});
+function hud(){
+  var y=window.innerHeight*.5,cur2=secs[0];
+  secs.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<=y)cur2=e});
+  if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2)cur2=secs[secs.length-1];
+  document.body.setAttribute('data-tone',cur2.getAttribute('data-tone'));
+  var code=(cur2===story&&root.classList.contains('js-story')&&storyCode)?storyCode:cur2.getAttribute('data-code');
+  if(hudCode.textContent!==code.replace(/&middot;/g,'·'))hudCode.innerHTML=code;
+  var max=document.documentElement.scrollHeight-window.innerHeight,pc=max>0?Math.round(clamp(window.scrollY/max,0,1)*100):0;
+  hudPct.textContent=('00'+pc).slice(-3);
+}
+function clock(){try{hudTime.textContent=new Intl.DateTimeFormat('en-CA',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'America/Toronto'}).format(new Date())}catch(e){hudTime.textContent=''}}
+window.addEventListener('scroll',hud,{passive:true});window.addEventListener('resize',function(){size();hud()});clock();setInterval(clock,20000);
+mqWide.addEventListener&&mqWide.addEventListener('change',setMode);mqMotion.addEventListener&&mqMotion.addEventListener('change',setMode);
+setMode();hud();
+/* tilt and glare on the offer tiles */
+if(canHover.matches&&mqMotion.matches){$$('.tilt').forEach(function(el){
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    el.style.setProperty('--ry',((x-.5)*8).toFixed(2)+'deg');el.style.setProperty('--rx',((.5-y)*6).toFixed(2)+'deg');el.style.setProperty('--gx',(x*100).toFixed(1)+'%');el.style.setProperty('--gy',(y*100).toFixed(1)+'%')});
+  el.addEventListener('pointerleave',function(){el.style.setProperty('--ry','0deg');el.style.setProperty('--rx','0deg')})})}
+})();
+
+(function(){
+var root=document.documentElement,btn=document.getElementById('themeBtn'),meta=document.querySelector('meta[name="theme-color"]');
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+function label(){var d=root.getAttribute('data-theme')==='dark';btn.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');btn.setAttribute('aria-pressed',d?'true':'false');if(meta)meta.setAttribute('content',d?'#060B1B':'#1E40AF')}
+function apply(t){root.setAttribute('data-theme',t);try{localStorage.setItem('alia-theme',t)}catch(e){}label()}
+label();
+btn.addEventListener('click',function(){
+  var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  if(!document.startViewTransition||reduce.matches){apply(next);return}
+  var r=btn.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,rad=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+  var tr=document.startViewTransition(function(){apply(next)});
+  tr.ready.then(function(){root.animate({clipPath:['circle(0px at '+x+'px '+y+'px)','circle('+rad+'px at '+x+'px '+y+'px)']},{duration:700,easing:'cubic-bezier(.4,0,.2,1)',pseudoElement:'::view-transition-new(root)'})}).catch(function(){});
+});
+/* count-up */
+var cnts=[].slice.call(document.querySelectorAll('.cnt'));
+function run(el){var from=+el.getAttribute('data-from')||0,to=+el.getAttribute('data-to'),t0=null,dur=1500;
+  function step(ts){if(t0===null)t0=ts;var u=Math.min(1,(ts-t0)/dur),e=1-Math.pow(1-u,3);el.textContent=Math.round(from+(to-from)*e);if(u<1)requestAnimationFrame(step)}
+  el.textContent=from;requestAnimationFrame(step)}
+if(!reduce.matches&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.6});cnts.forEach(function(c){io.observe(c)})}
+})();
+</script>
+</body>
+</html>
