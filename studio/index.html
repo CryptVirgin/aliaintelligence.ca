@@ -150,6 +150,11 @@ section[id]{scroll-margin-top:20px}
 .listen a{font:600 14px Inter;color:var(--sapphire);background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;transition:border-color .2s,transform .2s}
 .listen a:hover{border-color:var(--sky);transform:translateY(-2px)}
 .listen small{flex-basis:100%;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal)}
+.listen .lr{flex-basis:100%;display:grid;grid-template-columns:116px 1fr;gap:8px 10px;align-items:start}
+.listen .lr em{font:500 12px var(--mono);font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal);padding-top:9px}
+.listen .pl{display:flex;flex-wrap:wrap;gap:8px;min-width:0}
+.listen .lr a{font-size:13px;padding:6px 13px}
+@media(max-width:560px){.listen .lr{grid-template-columns:1fr;gap:4px}.listen .lr em{padding-top:0}}
 .single{height:auto;border-radius:16px;border:1px solid var(--line);width:100%}
 /* how it is made */
 .acts{list-style:none;margin-top:12px;border-top:1px solid var(--line)}
@@ -348,22 +353,14 @@ html[data-theme="dark"] .yt{box-shadow:none}
     <div class="wtext"><div class="label">( The Mosho )</div><h3>A late night call-in show</h3>
       <p>Mo the owl runs a quiet late-night call-in show about small communication problems, one caller at a time. Story episodes to listen to, plus free practice lessons for saying it out loud on your phone. Everything is in English and in Hinglish, on YouTube and Spotify. Press play for the trailer, or start with Episode 1.</p>
       <div class="listen"><small>Listen and watch, English</small>
-        <a href="https://open.spotify.com/show/56ktbiVkijC89NAVUT9QVL" target="_blank" rel="noopener">Spotify: episodes</a>
-        <a href="https://podcasts.apple.com/podcast/id6834917502" target="_blank" rel="noopener">Apple Podcasts: episodes</a>
-        <a href="https://open.spotify.com/show/3ct4CmmAcQrGLPgcqPm0to" target="_blank" rel="noopener">Spotify: practice lessons</a>
-        <a href="https://podcasts.apple.com/podcast/id6835004008" target="_blank" rel="noopener">Apple Podcasts: practice lessons</a>
-        <a href="https://www.youtube.com/playlist?list=PLJ7LlMgzdS-g" target="_blank" rel="noopener">YouTube: episodes</a>
-        <a href="https://www.youtube.com/playlist?list=PLZkYNc7lYlck" target="_blank" rel="noopener">YouTube: practice lessons</a>
-        <a href="https://www.youtube.com/watch?v=HxHf2VFdHdI" target="_blank" rel="noopener">YouTube: trailer</a>
+        <span class="lr"><em>Episodes</em><span class="pl"><a href="https://www.youtube.com/playlist?list=PLJ7LlMgzdS-g" target="_blank" rel="noopener" aria-label="English episodes on YouTube">YouTube</a><a href="https://open.spotify.com/show/56ktbiVkijC89NAVUT9QVL" target="_blank" rel="noopener" aria-label="English episodes on Spotify">Spotify</a><a href="https://podcasts.apple.com/podcast/id6834917502" target="_blank" rel="noopener" aria-label="English episodes on Apple Podcasts">Apple Podcasts</a></span></span>
+        <span class="lr"><em>Practice lessons</em><span class="pl"><a href="https://www.youtube.com/playlist?list=PLZkYNc7lYlck" target="_blank" rel="noopener" aria-label="English practice lessons on YouTube">YouTube</a><a href="https://open.spotify.com/show/3ct4CmmAcQrGLPgcqPm0to" target="_blank" rel="noopener" aria-label="English practice lessons on Spotify">Spotify</a><a href="https://podcasts.apple.com/podcast/id6835004008" target="_blank" rel="noopener" aria-label="English practice lessons on Apple Podcasts">Apple Podcasts</a></span></span>
+        <span class="lr"><em>Trailer</em><span class="pl"><a href="https://www.youtube.com/watch?v=HxHf2VFdHdI" target="_blank" rel="noopener" aria-label="The Mosho trailer in English on YouTube">YouTube</a></span></span>
       </div>
       <div class="listen"><small>Hinglish</small>
-        <a href="https://open.spotify.com/show/09Yj9WHqcJMmBwK0Fl8D4v" target="_blank" rel="noopener">Spotify: episodes</a>
-        <a href="https://podcasts.apple.com/podcast/id6835992564" target="_blank" rel="noopener">Apple Podcasts: episodes</a>
-        <a href="https://open.spotify.com/show/2SkhRiISWgNUUFbvG0brWf" target="_blank" rel="noopener">Spotify: practice lessons</a>
-        <a href="https://podcasts.apple.com/podcast/id6835992495" target="_blank" rel="noopener">Apple Podcasts: practice lessons</a>
-        <a href="https://www.youtube.com/playlist?list=PLHuRaSJXpJaI" target="_blank" rel="noopener">YouTube: episodes</a>
-        <a href="https://www.youtube.com/playlist?list=PLN4PtlftqbKA" target="_blank" rel="noopener">YouTube: practice lessons</a>
-        <a href="https://www.youtube.com/watch?v=-psR7XVAZxY" target="_blank" rel="noopener">YouTube: trailer</a>
+        <span class="lr"><em>Episodes</em><span class="pl"><a href="https://www.youtube.com/playlist?list=PLHuRaSJXpJaI" target="_blank" rel="noopener" aria-label="Hinglish episodes on YouTube">YouTube</a><a href="https://open.spotify.com/show/09Yj9WHqcJMmBwK0Fl8D4v" target="_blank" rel="noopener" aria-label="Hinglish episodes on Spotify">Spotify</a><a href="https://podcasts.apple.com/podcast/id6835992564" target="_blank" rel="noopener" aria-label="Hinglish episodes on Apple Podcasts">Apple Podcasts</a></span></span>
+        <span class="lr"><em>Practice lessons</em><span class="pl"><a href="https://www.youtube.com/playlist?list=PLN4PtlftqbKA" target="_blank" rel="noopener" aria-label="Hinglish practice lessons on YouTube">YouTube</a><a href="https://open.spotify.com/show/2SkhRiISWgNUUFbvG0brWf" target="_blank" rel="noopener" aria-label="Hinglish practice lessons on Spotify">Spotify</a><a href="https://podcasts.apple.com/podcast/id6835992495" target="_blank" rel="noopener" aria-label="Hinglish practice lessons on Apple Podcasts">Apple Podcasts</a></span></span>
+        <span class="lr"><em>Trailer</em><span class="pl"><a href="https://www.youtube.com/watch?v=-psR7XVAZxY" target="_blank" rel="noopener" aria-label="The Mosho trailer in Hinglish on YouTube">YouTube</a></span></span>
       </div>
     </div>
   </article>
